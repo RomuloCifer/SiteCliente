@@ -3,12 +3,55 @@ html {
   scroll-behavior: smooth;
 }
 
-    /* Reset básico */
+    /* Reset e configurações básicas */
     body {
       margin: 0;
       font-family: Arial, sans-serif;
       background-color: #f5f5f5;
     }
+
+    /* Hero Section */
+    .hero-section {
+      background: linear-gradient(rgba(17, 34, 58, 0.9), rgba(17, 34, 58, 0.9)),
+                  url('images/hero-bg.png') center/cover;
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    .hero-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .hero-content h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background-color: #ff6b6b;
+      color: white;
+      padding: 15px 30px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 20px;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background-color: #ff5252;
+      transform: scale(1.05);
+    }
+
+    /* Reset básico */
+    /*body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+    }*/
 
     /* Cabeçalho */
     .hero {
@@ -127,7 +170,17 @@ html {
       transform: scale(1.05);
     }
 
-    /* Formulário de Contato */
+    /* Formulário de Contato atualizado */
+    .contact-section {
+      background: linear-gradient(rgba(17, 34, 58, 0.05), rgba(17, 34, 58, 0.05));
+    }
+
+    .contact-intro {
+      max-width: 600px;
+      margin: 0 auto 40px;
+      color: #666;
+    }
+
     .formulario {
       max-width: 500px;
       margin: 40px auto 0 auto;
@@ -143,6 +196,14 @@ html {
       border: 1px solid #ccc;
       border-radius: 5px;
       resize: vertical;
+    }
+
+    .formulario select {
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      width: 100%;
     }
 
     .formulario button {
@@ -191,3 +252,104 @@ html {
     background-color: #334466;
     transform: scale(1.1);
   }
+
+    /* Cards de Benefícios */
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      padding: 20px;
+    }
+
+    .benefit-card {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .benefit-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .benefit-card i {
+      font-size: 2.5rem;
+      color: #11223a;
+      margin-bottom: 20px;
+    }
+
+    /* Dicas de Inglês */
+    .tips-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      padding: 20px;
+    }
+
+    .tip-card {
+      background: #fff;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    .read-more {
+      color: #11223a;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 15px;
+    }
+
+    /* Seção Nova Friburgo */
+    .city-content {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 30px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .city-image {
+      width: 100%;
+      max-width: 600px;
+      height: auto;
+      border-radius: 15px;
+      margin: 0 auto;
+      object-fit: cover;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    .city-text {
+      padding: 20px;
+      text-align: left;
+    }
+
+    @media (min-width: 768px) {
+      .city-content {
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+      }
+    }
+
+    /* Responsividade */
+    @media (max-width: 768px) {
+      .hero-content h1 {
+        font-size: 2rem;
+      }
+      
+      .card {
+        width: 100%;
+        min-width: auto;
+      }
+      
+      .benefits-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .city-content {
+        grid-template-columns: 1fr;
+      }
+    }

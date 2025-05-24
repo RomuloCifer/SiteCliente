@@ -3,60 +3,115 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Menu Dinâmico com Seções</title>
+  <title>SmartEnglishHub - Escola de Inglês em Nova Friburgo</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-
-  <!-- Cabeçalho Fixo com Logo e Botões -->
   <header class="hero" id="mainHeader">
     <div class="header-content">
       <img src="imagens/banner.png" alt="SMARTENGLISHUB Logo" class="logo">
       <div class="top-buttons">
         <a href="#contato" class="btn-top">Fale Conosco</a>
-        <a href="#" class="btn-top">Voltar ao Topo</a> <!-- href="#" leva ao topo da página -->
+        <a href="#" class="btn-top">Voltar ao Topo</a>
       </div>
     </div>
   </header>
 
-  <!-- Menu com os cards (agora rola com a página) -->
-  <section class="menu" id="mainMenuCards">
-    <a href="#midia" class="card">Ver Mídia</a>
-    <a href="#contato" class="card">Fale Conosco</a>
-    <a href="#embreve" class="card">Em breve</a>
-  </section>
-
-  <!-- Menu Lateral de Ícones (Controlado por JS) -->
-  <nav class="side-icon-menu" id="sideIconMenu">
-    <a href="#midia" class="side-icon-btn" title="Ver Mídia">🖼️</a>
-    <a href="#contato" class="side-icon-btn" title="Fale Conosco">✉️</a>
-    <a href="#embreve" class="side-icon-btn" title="Em breve">⏳</a>
-  </nav>
-
-  <!-- Seções -->
-  <section id="midia" class="section">
-    <h2>Galeria de Mídia</h2>
-    <div class="media-grid">
-      <img src="https://via.placeholder.com/200x120/cccccc/000000?text=Video+1" alt="Vídeo 1" class="thumb">
-      <img src="https://via.placeholder.com/200x120/cccccc/000000?text=Video+2" alt="Vídeo 2" class="thumb">
-      <img src="https://via.placeholder.com/200x120/cccccc/000000?text=Video+3" alt="Vídeo 3" class="thumb">
+  <section class="hero-section">
+    <div class="hero-content">
+      <h1>Transforme seu futuro com Inglês</h1>
+      <p>Destaque-se no mercado de trabalho com um inglês fluente</p>
+      <a href="#contato" class="cta-button">Comece Agora</a>
     </div>
   </section>
 
-  <section id="contato" class="section">
-    <h2>Fale Conosco</h2>
+  <section class="menu" id="mainMenuCards">
+    <a href="#beneficios" class="card">
+      <i class="fas fa-rocket"></i>
+      <span>Benefícios</span>
+    </a>
+    <a href="#dicas" class="card">
+      <i class="fas fa-lightbulb"></i>
+      <span>Dicas de Inglês</span>
+    </a>
+    <a href="#friburgo" class="card">
+      <i class="fas fa-map-marker-alt"></i>
+      <span>Nova Friburgo</span>
+    </a>
+  </section>
+
+  <section id="beneficios" class="section">
+    <h2>Por que estudar conosco?</h2>
+    <div class="benefits-grid">
+      <div class="benefit-card">
+        <i class="fas fa-chart-line"></i>
+        <h3>Aumente seu Salário</h3>
+        <p>Profissionais bilíngues ganham em média 40% mais</p>
+      </div>
+      <div class="benefit-card">
+        <i class="fas fa-globe"></i>
+        <h3>Oportunidades Globais</h3>
+        <p>Acesse vagas internacionais e empresas multinacionais</p>
+      </div>
+      <div class="benefit-card">
+        <i class="fas fa-laptop"></i>
+        <h3>Metodologia Moderna</h3>
+        <p>Aprenda com tecnologia e métodos atualizados</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="dicas" class="section">
+    <h2>Dicas de Inglês</h2>
+    <div class="tips-container">
+      <article class="tip-card">
+        <h3>Dica do Dia</h3>
+        <p>Como usar "Would" vs "Will" - Aprenda a diferença!</p>
+        <a href="#" class="read-more">Ler mais</a>
+      </article>
+      <article class="tip-card">
+        <h3>Vocabulário Empresarial</h3>
+        <p>10 expressões essenciais para reuniões</p>
+        <a href="#" class="read-more">Ler mais</a>
+      </article>
+    </div>
+  </section>
+
+  <section id="friburgo" class="section">
+    <h2>Nossa Cidade: Nova Friburgo</h2>
+    <div class="city-content">
+      <img src="images/nova-friburgo.jpg" alt="Nova Friburgo" class="city-image">
+      <div class="city-text">
+        <p>Localizada na região serrana do Rio de Janeiro, Nova Friburgo é um polo de oportunidades em crescimento. Com diversas empresas internacionais e um mercado em expansão, o inglês se torna cada vez mais essencial.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contato" class="section contact-section">
+    <h2>Invista no seu futuro</h2>
+    <p class="contact-intro">Agende sua aula experimental gratuita e comece sua jornada rumo à fluência!</p>
     <form class="formulario">
       <input type="text" placeholder="Nome" required />
       <input type="email" placeholder="Email" required />
+      <input type="tel" placeholder="Telefone" required />
+      <select required>
+        <option value="">Selecione seu nível de inglês</option>
+        <option value="iniciante">Iniciante</option>
+        <option value="intermediario">Intermediário</option>
+        <option value="avancado">Avançado</option>
+      </select>
       <textarea rows="5" placeholder="Mensagem" required></textarea>
-      <button type="submit">Enviar</button>
+      <button type="submit">Quero começar agora!</button>
     </form>
   </section>
 
-  <section id="embreve" class="section">
-    <h2>Em breve</h2>
-    <p>Novidades em breve...</p>
-  </section>
+  <nav class="side-icon-menu" id="sideIconMenu">
+    <a href="#beneficios" class="side-icon-btn" title="Benefícios">🚀</a>
+    <a href="#dicas" class="side-icon-btn" title="Dicas">💡</a>
+    <a href="#friburgo" class="side-icon-btn" title="Nova Friburgo">🏔️</a>
+    <a href="#contato" class="side-icon-btn" title="Contato">📱</a>
+  </nav>
 
   <script>
     document.addEventListener('DOMContentLoaded', function() {
