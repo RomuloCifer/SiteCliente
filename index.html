@@ -90,6 +90,27 @@
 
   <section id="contato" class="section contact-section">
     <h2>Invista no seu futuro</h2>
+    <div class="special-offer">
+      <div class="offer-badge">
+        <i class="fas fa-percentage"></i>
+        <span>10% OFF</span>
+      </div>
+      <h3>Oferta Especial</h3>
+      <div class="timer-container">
+        <p>Essa oferta expira em:</p>
+        <div class="countdown-timer">
+          <div class="timer-segment">
+            <span id="minutes">15</span>
+            <label>min</label>
+          </div>
+          <div class="timer-divider">:</div>
+          <div class="timer-segment">
+            <span id="seconds">00</span>
+            <label>seg</label>
+          </div>
+        </div>
+      </div>
+    </div>
     <p class="contact-intro">Agende sua aula experimental gratuita e comece sua jornada rumo à fluência!</p>
     <form class="formulario">
       <input type="text" placeholder="Nome" required />
@@ -387,6 +408,63 @@
         document.body.style.overflow = 'auto';
       }
     }
+
+    // Timer functionality
+    function startTimer(duration, display) {
+      let timer = duration;
+      let minutes, seconds;
+
+      const countdown = setInterval(function () {
+        minutes = parseInt(timer / 60, 10);
+        seconds = parseInt(timer % 60, 10);
+
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        document.getElementById('minutes').textContent = minutes;
+        document.getElementById('seconds').textContent = seconds;
+
+        if (--timer < 0) {
+          clearInterval(countdown);
+          document.querySelector('.special-offer').classList.add('expired');
+          document.querySelector('.special-offer').innerHTML = `
+            <div class="offer-expired">
+              <i class="fas fa-clock"></i>
+              <h3>Oferta Expirada</h3>
+              <p>Entre em contato conosco para conhecer outras ofertas disponíveis!</p>
+            </div>
+          `;
+        }
+      }, 1000);
+
+      // Store timer end time in localStorage
+      const endTime = new Date().getTime() + (duration * 1000);
+      localStorage.setItem('timerEndTime', endTime);
+    }
+
+    // Check if there's a timer running
+    document.addEventListener('DOMContentLoaded', function() {
+      const endTime = localStorage.getItem('timerEndTime');
+      if (endTime) {
+        const now = new Date().getTime();
+        const timeLeft = Math.floor((endTime - now) / 1000);
+
+        if (timeLeft > 0) {
+          startTimer(timeLeft);
+        } else {
+          document.querySelector('.special-offer').classList.add('expired');
+          document.querySelector('.special-offer').innerHTML = `
+            <div class="offer-expired">
+              <i class="fas fa-clock"></i>
+              <h3>Oferta Expirada</h3>
+              <p>Entre em contato conosco para conhecer outras ofertas disponíveis!</p>
+            </div>
+          `;
+        }
+      } else {
+        startTimer(15 * 60); // 15 minutes
+      }
+    });
   </script>
 </body>
 </html>
