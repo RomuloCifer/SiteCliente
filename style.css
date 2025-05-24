@@ -267,6 +267,7 @@ html {
       border-radius: 15px;
       box-shadow: 0 4px 15px rgba(0,0,0,0.1);
       transition: transform 0.3s ease;
+      cursor: pointer;
     }
 
     .benefit-card:hover {
@@ -353,3 +354,103 @@ html {
         grid-template-columns: 1fr;
       }
     }
+
+    /* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    overflow-y: auto;
+}
+
+.modal-content {
+    background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+    margin: 5vh auto;
+    padding: 40px;
+    width: 90%;
+    max-width: 1000px;
+    border-radius: 20px;
+    position: relative;
+    animation: modalSlideIn 0.3s ease;
+    color: white;
+}
+
+.close-modal {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.close-modal:hover {
+    transform: rotate(90deg);
+}
+
+@keyframes modalSlideIn {
+    from {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Step styles for modal */
+.steps-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.step {
+    text-align: center;
+    padding: 20px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    animation: stepFadeIn 0.5s forwards;
+    color: #333;
+}
+
+.step-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #1a2a6c, #b21f1f);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    color: white;
+    font-size: 25px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+@keyframes stepFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.step:nth-child(1) { animation-delay: 0.1s; }
+.step:nth-child(2) { animation-delay: 0.2s; }
+.step:nth-child(3) { animation-delay: 0.3s; }
+.step:nth-child(4) { animation-delay: 0.4s; }
+.step:nth-child(5) { animation-delay: 0.5s; }

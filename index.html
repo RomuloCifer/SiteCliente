@@ -54,7 +54,7 @@
         <h3>Oportunidades Globais</h3>
         <p>Acesse vagas internacionais e empresas multinacionais</p>
       </div>
-      <div class="benefit-card">
+      <div class="benefit-card" onclick="openMethodologyModal()">
         <i class="fas fa-laptop"></i>
         <h3>Metodologia Moderna</h3>
         <p>Aprenda com tecnologia e métodos atualizados</p>
@@ -113,6 +113,57 @@
     <a href="#contato" class="side-icon-btn" title="Contato">📱</a>
   </nav>
 
+  <!-- Modal Structure -->
+  <div id="methodologyModal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <div class="steps-container">
+        <div class="step" data-step="1">
+            <div class="step-icon">
+                <i class="fas fa-headset"></i>
+            </div>
+            <h3>Avaliação Inicial</h3>
+            <p>Teste de nivelamento personalizado para identificar seu nível atual</p>
+        </div>
+
+        <div class="step" data-step="2">
+            <div class="step-icon">
+                <i class="fas fa-route"></i>
+            </div>
+            <h3>Plano Personalizado</h3>
+            <p>Criação de roteiro de estudos baseado nos seus objetivos</p>
+        </div>
+
+        <div class="step" data-step="3">
+            <div class="step-icon">
+                <i class="fas fa-laptop-code"></i>
+            </div>
+            <h3>Aulas Interativas</h3>
+            <p>Combinação de aulas ao vivo e plataforma digital</p>
+        </div>
+
+        <div class="step" data-step="4">
+            <div class="step-icon">
+                <i class="fas fa-comments"></i>
+            </div>
+            <h3>Prática Real</h3>
+            <p>Conversação com nativos e situações do dia a dia</p>
+        </div>
+
+        <div class="step" data-step="5">
+            <div class="step-icon">
+                <i class="fas fa-chart-line"></i>
+            </div>
+            <h3>Acompanhamento</h3>
+            <p>Monitoramento contínuo do seu progresso</p>
+        </div>
+      </div>
+      <div class="progress-bar">
+        <div class="progress"></div>
+      </div>
+    </div>
+  </div>
+
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       const header = document.getElementById('mainHeader');
@@ -147,7 +198,26 @@
         }
       });
     });
-  </script>
 
+    function openMethodologyModal() {
+      const modal = document.getElementById('methodologyModal');
+      modal.style.display = 'block';
+      document.body.style.overflow = 'hidden';
+    }
+
+    document.querySelector('.close-modal').onclick = function() {
+      const modal = document.getElementById('methodologyModal');
+      modal.style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }
+
+    window.onclick = function(event) {
+      const modal = document.getElementById('methodologyModal');
+      if (event.target == modal) {
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+      }
+    }
+  </script>
 </body>
 </html>
