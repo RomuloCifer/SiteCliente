@@ -70,10 +70,10 @@
         <p>Como usar "Would" vs "Will" - Aprenda a diferença!</p>
         <a href="#" class="read-more">Ler mais</a>
       </article>
-      <article class="tip-card">
+      <article class="tip-card" onclick="openBusinessVocabModal()">
         <h3>Vocabulário Empresarial</h3>
         <p>10 expressões essenciais para reuniões</p>
-        <a href="#" class="read-more">Ler mais</a>
+        <a href="#" class="read-more">Saiba mais</a>
       </article>
     </div>
   </section>
@@ -214,6 +214,84 @@
     </div>
   </div>
 
+  <div id="businessVocabModal" class="modal business-vocab-modal">
+    <div class="modal-content wide-modal">
+      <span class="close-modal" onclick="closeBusinessVocabModal()">&times;</span>
+      <h2>Vocabulário Essencial para Reuniões</h2>
+      <div class="business-vocab-container">
+        <div class="vocab-card">
+          <h3>"Let's touch base on..."</h3>
+          <p class="en-example">"Let's touch base on the project status next week."</p>
+          <p class="pt-explanation">Significado: "Vamos conversar/alinhar sobre..."<br>
+          Uso: Para sugerir uma breve reunião ou atualização sobre um assunto.</p>
+        </div>
+
+        <div class="vocab-card">
+          <h3>"Moving forward..."</h3>
+          <p class="en-example">"Moving forward, we'll implement these new procedures."</p>
+          <p class="pt-explanation">Significado: "Daqui para frente..." ou "A partir de agora..."<br>
+          Uso: Para indicar mudanças ou planos futuros.</p>
+        </div>
+
+        <div class="vocab-card">
+          <h3>"On the same page"</h3>
+          <p class="en-example">"Are we all on the same page regarding the deadline?"</p>
+          <p class="pt-explanation">Significado: "Estar em sintonia/acordo"<br>
+          Uso: Para confirmar que todos têm o mesmo entendimento.</p>
+        </div>
+
+        <div class="vocab-card">
+          <h3>"Bottom line"</h3>
+          <p class="en-example">"The bottom line is we need to increase sales."</p>
+          <p class="pt-explanation">Significado: "Em resumo" ou "O mais importante"<br>
+          Uso: Para enfatizar o ponto mais importante ou a conclusão.</p>
+        </div>
+
+        <div class="vocab-card">
+          <h3>"Win-win situation"</h3>
+          <p class="en-example">"This partnership would be a win-win situation for both companies."</p>
+          <p class="pt-explanation">Significado: "Situação benéfica para ambos os lados"<br>
+          Uso: Para descrever um resultado positivo para todas as partes.</p>
+        </div>
+
+        <div class="vocab-card">
+          <h3>"To follow up"</h3>
+          <p class="en-example">"I'll follow up with you after the meeting."</p>
+          <p class="pt-explanation">Significado: "Dar continuidade" ou "Acompanhar"<br>
+          Uso: Para indicar que você dará sequência a um assunto.</p>
+        </div>
+
+        <div class="vocab-card">
+          <h3>"To keep in the loop"</h3>
+          <p class="en-example">"Please keep me in the loop on any developments."</p>
+          <p class="pt-explanation">Significado: "Manter informado"<br>
+          Uso: Para pedir ou prometer manter alguém atualizado.</p>
+        </div>
+
+        <div class="vocab-card">
+          <h3>"To run through"</h3>
+          <p class="en-example">"Let's run through the main points quickly."</p>
+          <p class="pt-explanation">Significado: "Revisar rapidamente"<br>
+          Uso: Para sugerir uma revisão rápida dos pontos principais.</p>
+        </div>
+
+        <div class="vocab-card">
+          <h3>"To wrap up"</h3>
+          <p class="en-example">"Let's wrap up this meeting in the next five minutes."</p>
+          <p class="pt-explanation">Significado: "Concluir" ou "Finalizar"<br>
+          Uso: Para indicar que está chegando ao fim de algo.</p>
+        </div>
+
+        <div class="vocab-card">
+          <h3>"To take it offline"</h3>
+          <p class="en-example">"We can take this discussion offline."</p>
+          <p class="pt-explanation">Significado: "Continuar a discussão em outro momento/local"<br>
+          Uso: Para sugerir continuar uma discussão específica fora da reunião atual.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       const header = document.getElementById('mainHeader');
@@ -273,6 +351,18 @@
       document.body.style.overflow = 'auto';
     }
 
+    function openBusinessVocabModal() {
+      const modal = document.getElementById('businessVocabModal');
+      modal.style.display = 'block';
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeBusinessVocabModal() {
+      const modal = document.getElementById('businessVocabModal');
+      modal.style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }
+
     document.querySelector('.close-modal').onclick = function() {
       const modal = document.getElementById('methodologyModal');
       modal.style.display = 'none';
@@ -282,6 +372,7 @@
     window.onclick = function(event) {
       const methodologyModal = document.getElementById('methodologyModal');
       const globalOpportunitiesModal = document.getElementById('globalOpportunitiesModal');
+      const businessVocabModal = document.getElementById('businessVocabModal');
       
       if (event.target == methodologyModal) {
         methodologyModal.style.display = 'none';
@@ -289,6 +380,10 @@
       }
       if (event.target == globalOpportunitiesModal) {
         globalOpportunitiesModal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+      }
+      if (event.target == businessVocabModal) {
+        businessVocabModal.style.display = 'none';
         document.body.style.overflow = 'auto';
       }
     }

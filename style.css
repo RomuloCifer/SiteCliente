@@ -519,3 +519,70 @@ html {
 .opportunity:nth-child(3) { animation-delay: 0.3s; }
 .opportunity:nth-child(4) { animation-delay: 0.4s; }
 .opportunity:nth-child(5) { animation-delay: 0.5s; }
+
+    /* Estilos para o modal de vocabulário empresarial */
+    .wide-modal {
+        max-width: 1400px !important;
+        padding: 40px !important;
+    }
+
+    .business-vocab-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        gap: 30px;
+        margin-top: 30px;
+    }
+
+    .vocab-card {
+        background: rgba(255, 255, 255, 0.95);
+        padding: 25px;
+        border-radius: 15px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        color: #333;
+        animation: stepFadeIn 0.5s forwards;
+    }
+
+    .vocab-card h3 {
+        color: #1a2a6c;
+        font-size: 1.4rem;
+        margin-bottom: 15px;
+    }
+
+    .en-example {
+        color: #b21f1f;
+        font-style: italic;
+        margin-bottom: 15px;
+        font-size: 1.1rem;
+    }
+
+    .pt-explanation {
+        line-height: 1.6;
+    }
+
+    .business-vocab-modal .modal-content h2 {
+        color: white;
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 2rem;
+    }
+
+    @media (max-width: 768px) {
+        .business-vocab-container {
+            grid-template-columns: 1fr;
+        }
+        
+        .vocab-card {
+            margin: 10px;
+        }
+    }
+
+    .vocab-card:nth-child(1) { animation-delay: 0.1s; }
+    .vocab-card:nth-child(2) { animation-delay: 0.2s; }
+    .vocab-card:nth-child(3) { animation-delay: 0.3s; }
+    .vocab-card:nth-child(4) { animation-delay: 0.4s; }
+    .vocab-card:nth-child(5) { animation-delay: 0.5s; }
+    .vocab-card:nth-child(6) { animation-delay: 0.6s; }
+    .vocab-card:nth-child(7) { animation-delay: 0.7s; }
+    .vocab-card:nth-child(8) { animation-delay: 0.8s; }
+    .vocab-card:nth-child(9) { animation-delay: 0.9s; }
+    .vocab-card:nth-child(10) { animation-delay: 1s; }
