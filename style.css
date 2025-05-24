@@ -462,3 +462,60 @@ html {
 .step:nth-child(3) { animation-delay: 0.3s; }
 .step:nth-child(4) { animation-delay: 0.4s; }
 .step:nth-child(5) { animation-delay: 0.5s; }
+
+/* Estilos específicos para o modal de Oportunidades Globais */
+.opportunities-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 20px;
+}
+
+.opportunity {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    color: #333;
+    animation: stepFadeIn 0.5s forwards;
+}
+
+.opportunity-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #1a2a6c, #b21f1f);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    color: white;
+    font-size: 25px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.opportunity h3 {
+    margin: 15px 0;
+    color: #1a2a6c;
+}
+
+.opportunity ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: left;
+}
+
+.opportunity ul li {
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.opportunity ul li:last-child {
+    border-bottom: none;
+}
+
+.opportunity:nth-child(1) { animation-delay: 0.1s; }
+.opportunity:nth-child(2) { animation-delay: 0.2s; }
+.opportunity:nth-child(3) { animation-delay: 0.3s; }
+.opportunity:nth-child(4) { animation-delay: 0.4s; }
+.opportunity:nth-child(5) { animation-delay: 0.5s; }
