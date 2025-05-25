@@ -3,10 +3,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const popup = document.getElementById('exitPopup');
     const closeBtn = document.querySelector('.close-popup');
     
-    // Mostrar popup quando o mouse sair da janela
-    document.addEventListener('mouseout', function(e) {
+    // Mostrar popup apenas quando o mouse sair pela parte superior da página
+    document.addEventListener('mouseleave', function(e) {
         if (!shown && e.clientY < 50) {
             popup.style.display = 'block';
+            document.body.style.overflow = 'hidden';
             shown = true;
         }
     });
@@ -14,12 +15,14 @@ document.addEventListener('DOMContentLoaded', function() {
     // Fechar popup
     closeBtn.addEventListener('click', function() {
         popup.style.display = 'none';
+        document.body.style.overflow = 'auto';
     });
 
     // Fechar ao clicar fora
     window.addEventListener('click', function(e) {
         if (e.target == popup) {
             popup.style.display = 'none';
+            document.body.style.overflow = 'auto';
         }
     });
 });

@@ -514,19 +514,6 @@
     // Exit Intent Popup
     let exitPopupShown = false;
 
-    window.addEventListener('beforeunload', function (e) {
-      if (!exitPopupShown) {
-        e.preventDefault(); // Cancela o evento padrão
-        e.returnValue = ''; // Mensagem padrão do navegador (alguns navegadores exigem)
-        
-        showExitPopup();
-        exitPopupShown = true;
-        
-        // Retorna uma string (alguns navegadores exigem)
-        return 'Espere! Temos uma oferta especial para você!';
-      }
-    });
-
     function showExitPopup() {
       const popup = document.getElementById('exitPopup');
       if (popup) {
