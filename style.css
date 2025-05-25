@@ -1028,9 +1028,30 @@ body.dark-theme {
     position: absolute;
     right: 15px;
     top: 15px;
-    font-size: 24px;
+    width: 32px;
+    height: 32px;
+    background-color: #ff6b6b;
+    border: none;
+    border-radius: 50%;
+    font-size: 20px;
     cursor: pointer;
-    color: #666;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    z-index: 1002;
+}
+
+.close-popup:hover {
+    background-color: #ff5252;
+    transform: rotate(90deg) scale(1.1);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.close-popup:active {
+    transform: rotate(90deg) scale(0.95);
 }
 
 .exit-popup ul {
@@ -1086,4 +1107,33 @@ body.dark-theme {
   0% { opacity: 1; }
   50% { opacity: 0; }
   100% { opacity: 1; }
+}
+
+/* Trust Indicators */
+.trust-indicators {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+  color: #666;
+  font-size: 0.9rem;
+  flex-wrap: wrap;
+}
+
+.trust-indicators span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.trust-indicators .fa-check-circle {
+  color: #4CAF50;
+}
+
+.trust-indicators .fa-times-circle {
+  color: #f44336;
+}
+
+.trust-indicators .fa-lock {
+  color: #ffc107;
 }
