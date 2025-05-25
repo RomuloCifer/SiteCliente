@@ -23,7 +23,7 @@
 
   <section class="hero-section">
     <div class="hero-content">
-      <h1>Transforme seu futuro com Inglês</h1>
+      <h1><span id="typed-text"></span></h1>
       <p>Destaque-se no mercado de trabalho com um inglês fluente</p>
       <a href="#contato" class="cta-button">Garantir Minha Vaga Agora →</a>
     </div>
@@ -355,7 +355,7 @@
 
   <a href="https://wa.me/5522999999999" class="whatsapp-button" target="_blank" rel="noopener noreferrer">
     <i class="fab fa-whatsapp"></i>
-    <span class="whatsapp-text">Fale conosco!</span>
+    <span class="whatsapp-text">Agende sua aula agora!</span>
   </a>
 
   <script>
@@ -555,5 +555,21 @@
   </script>
   <script src="theme.js"></script>
   <script src="exit-intent.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script>
+    var typed = new Typed("#typed-text", {
+      strings: [
+        "Fale inglês com confiança",
+        "Ganhe oportunidades internacionais",
+        "Transforme sua carreira"
+      ],
+      typeSpeed: 50,
+      backSpeed: 30,
+      backDelay: 2000,
+      loop: true,
+      cursorChar: '|',
+      fadeOut: true
+    });
+  </script>
 </body>
 </html>
