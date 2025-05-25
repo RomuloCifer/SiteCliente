@@ -824,6 +824,39 @@ body.dark-theme {
     color: #fff;
 }
 
+/* Ajustes dos ícones para tema escuro */
+.dark-theme .card i {
+    color: #ffd700; /* Dourado para os ícones dos cards principais */
+}
+
+.dark-theme .benefit-card i {
+    color: #00ffff; /* Ciano para os ícones de benefícios */
+}
+
+.dark-theme .side-icon-btn {
+    background-color: #2d2d2d;
+    color: #00ffff; /* Ciano para os ícones do menu lateral */
+}
+
+.dark-theme .side-icon-btn:hover {
+    background-color: #3d3d3d;
+    color: #ffd700; /* Dourado no hover */
+}
+
+/* Ajuste dos botões do topo para tema escuro */
+.dark-theme .btn-top {
+    background-color: #2d2d2d;
+    color: #e0e0e0; /* Cinza claro elegante */
+    border-color: #4d4d4d;
+}
+
+.dark-theme .btn-top:hover {
+    background-color: #3d3d3d;
+    color: #ffd700; /* Mantém o dourado no hover para consistência */
+    border-color: #ffd700;
+    box-shadow: 0 2px 8px rgba(255, 215, 0, 0.2); /* Sutil brilho dourado */
+}
+
 .close-modal {
     position: absolute;
     top: -20px;
@@ -857,4 +890,33 @@ body.dark-theme {
 .modal-content {
     margin: 30px auto;
     position: relative;
+}
+
+/* Floating CTA Animation */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+.cta-button {
+    animation: float 3s ease-in-out infinite;
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+}
+
+.cta-button:hover {
+    animation: none;
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
