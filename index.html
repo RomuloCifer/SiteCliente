@@ -91,6 +91,28 @@
     </div>
   </section>
 
+  <section id="depoimentos" class="section testimonials-section">
+    <h2>O que nossos alunos dizem</h2>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <img src="images/student1.jpg" alt="Aluno João" class="student-photo">
+        <div class="testimonial-content">
+          <p>"Depois de 6 meses de curso, consegui uma promoção para uma posição internacional!"</p>
+          <h4>João Silva</h4>
+          <span>Analista de Marketing</span>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <img src="images/student2.jpg" alt="Aluna Maria" class="student-photo">
+        <div class="testimonial-content">
+          <p>"A metodologia é incrível. Em 3 meses já estava conversando com clientes em inglês."</p>
+          <h4>Maria Santos</h4>
+          <span>Desenvolvedora de Software</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section id="contato" class="section contact-section">
     <h2>Invista no seu futuro</h2>
     <div class="special-offer">
@@ -316,6 +338,21 @@
     </div>
   </div>
 
+  <!-- Exit Intent Popup -->
+  <div id="exitPopup" class="exit-popup">
+    <div class="exit-popup-content">
+      <span class="close-popup">&times;</span>
+      <h3>Espere! Temos uma oferta especial para você!</h3>
+      <p>Matricule-se hoje e ganhe:</p>
+      <ul>
+        <li><i class="fas fa-check"></i> 2 aulas extras grátis</li>
+        <li><i class="fas fa-check"></i> Material didático digital</li>
+        <li><i class="fas fa-check"></i> Teste de nivelamento gratuito</li>
+      </ul>
+      <a href="#contato" class="popup-cta">Quero aproveitar essa oferta!</a>
+    </div>
+  </div>
+
   <a href="https://wa.me/5522999999999" class="whatsapp-button" target="_blank" rel="noopener noreferrer">
     <i class="fab fa-whatsapp"></i>
     <span class="whatsapp-text">Fale conosco!</span>
@@ -473,7 +510,50 @@
         startTimer(15 * 60); // 15 minutes
       }
     });
+
+    // Exit Intent Popup
+    let exitPopupShown = false;
+
+    window.addEventListener('beforeunload', function (e) {
+      if (!exitPopupShown) {
+        e.preventDefault(); // Cancela o evento padrão
+        e.returnValue = ''; // Mensagem padrão do navegador (alguns navegadores exigem)
+        
+        showExitPopup();
+        exitPopupShown = true;
+        
+        // Retorna uma string (alguns navegadores exigem)
+        return 'Espere! Temos uma oferta especial para você!';
+      }
+    });
+
+    function showExitPopup() {
+      const popup = document.getElementById('exitPopup');
+      if (popup) {
+        popup.style.display = 'block';
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    function closeExitPopup() {
+      const popup = document.getElementById('exitPopup');
+      if (popup) {
+        popup.style.display = 'none';
+        document.body.style.overflow = 'auto';
+      }
+    }
+
+    // Mantém os event listeners para fechar o popup
+    document.querySelector('.close-popup').onclick = closeExitPopup;
+    
+    window.onclick = function(event) {
+      const popup = document.getElementById('exitPopup');
+      if (event.target == popup) {
+        closeExitPopup();
+      }
+    }
   </script>
   <script src="theme.js"></script>
+  <script src="exit-intent.js"></script>
 </body>
 </html>

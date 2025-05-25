@@ -81,6 +81,20 @@ html {
       max-width: 300px;
       width: auto;
       object-fit: contain;
+      display: block; /* Restaurar display */
+    }
+
+    /* Dark theme adjustments for logo */
+    .dark-theme .logo-smart {
+        color: #ff8f8f;
+    }
+
+    .dark-theme .logo-english {
+        color: #fff;
+    }
+
+    .dark-theme .logo-hub {
+        color: #6ce5dc;
     }
 
     /* Botões do Topo */
@@ -919,4 +933,128 @@ body.dark-theme {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+/* Testimonials Section */
+.testimonials-section {
+    background-color: #f9f9f9;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.testimonial-card {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-align: left;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.student-photo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.testimonial-content p {
+    font-style: italic;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.testimonial-content h4 {
+    margin: 0;
+    color: #11223a;
+}
+
+.testimonial-content span {
+    font-size: 0.9em;
+    color: #666;
+}
+
+/* Exit Popup */
+.exit-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    z-index: 1000;
+    animation: fadeIn 0.3s;
+}
+
+.exit-popup-content {
+    position: relative;
+    background: white;
+    width: 90%;
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    animation: slideUp 0.3s;
+}
+
+.close-popup {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #666;
+}
+
+.exit-popup ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.exit-popup li {
+    margin: 10px 0;
+    color: #333;
+}
+
+.exit-popup li i {
+    color: #4CAF50;
+    margin-right: 10px;
+}
+
+.popup-cta {
+    display: inline-block;
+    background: #ff6b6b;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    margin-top: 20px;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+.popup-cta:hover {
+    transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
 }
