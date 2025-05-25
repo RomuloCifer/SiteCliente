@@ -698,3 +698,50 @@ html {
         padding: 8px 15px;
     }
 }
+
+/* WhatsApp Button */
+.whatsapp-button {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25d366;
+    color: white;
+    border-radius: 50px;
+    padding: 15px 25px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.whatsapp-button i {
+    font-size: 24px;
+}
+
+.whatsapp-text {
+    font-weight: bold;
+}
+
+.whatsapp-button:hover {
+    transform: scale(1.05);
+    background-color: #1da851;
+}
+
+@media (max-width: 768px) {
+    .whatsapp-button {
+        padding: 15px;
+        bottom: 20px;
+        right: 20px;
+    }
+    
+    .whatsapp-text {
+        display: none;
+    }
+    
+    .whatsapp-button i {
+        margin: 0;
+    }
+}
