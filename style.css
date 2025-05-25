@@ -823,3 +823,38 @@ body.dark-theme {
 .dark-theme .theme-button:hover {
     color: #fff;
 }
+
+.close-modal {
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    background-color: #fff;
+    border: 2px solid #1a2a6c;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1a2a6c;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    line-height: 1;
+    z-index: 1001;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.close-modal:hover {
+    background-color: #1a2a6c;
+    color: #fff;
+    transform: rotate(90deg);
+}
+
+/* Ajuste do container do modal para acomodar o botão de fechar */
+.modal-content {
+    margin: 30px auto;
+    position: relative;
+}
