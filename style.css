@@ -745,3 +745,81 @@ html {
         margin: 0;
     }
 }
+
+/* Theme Toggle Button */
+.theme-toggle {
+    margin-right: 20px;
+}
+
+.theme-button {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 10px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.theme-button:hover {
+    color: #ffd700;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Dark Theme Classes */
+body.dark-theme {
+    background-color: #1a1a1a;
+    color: #fff;
+}
+
+.dark-theme .section {
+    background-color: #2d2d2d;
+    color: #fff;
+}
+
+.dark-theme .card {
+    background-color: #3d3d3d;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(255,255,255,0.1);
+}
+
+.dark-theme .benefit-card,
+.dark-theme .tip-card {
+    background-color: #3d3d3d;
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.dark-theme .formulario input,
+.dark-theme .formulario textarea,
+.dark-theme .formulario select {
+    background-color: #2d2d2d;
+    color: #fff;
+    border-color: #4d4d4d;
+}
+
+.dark-theme .hero {
+    background-color: #000;
+}
+
+.dark-theme .menu {
+    background-color: #2d2d2d;
+}
+
+.dark-theme .theme-button {
+    color: #ffd700;
+    background: none;
+    border: none;
+}
+
+.dark-theme .theme-button:hover {
+    color: #fff;
+}
