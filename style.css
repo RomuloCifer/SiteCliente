@@ -16,18 +16,6 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, #050816, #0A1128, #001F54);
-  z-index: -2;
-}
-
-/* Add stars overlay */
-body::after {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
   background-image: 
     radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 4px),
     radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 2px),
@@ -67,6 +55,7 @@ body {
   color: white;
   padding: 80px 20px;
   text-align: center;
+  margin-bottom: 60px; /* Aumentado para manter consistência */
 }
 
 .hero-content {
@@ -177,10 +166,13 @@ body {
   justify-content: space-around;
   align-items: center;
   padding: 40px 20px;
-  background-color: rgba(0, 31, 84, 0.5);
+  background-color: rgba(30, 30, 30, 0.5);
   backdrop-filter: blur(10px);
   flex-wrap: wrap;
   gap: 20px;
+  margin: 60px auto; /* Aumentado para manter consistência */
+  max-width: 1400px;
+  border-radius: 15px;
 }
 
 .card {
@@ -207,12 +199,13 @@ body {
 
 /* Seções */
 .section {
-  padding: 100px 20px;
-  text-align: center;
-  background-color: rgba(10, 17, 40, 0.7);
-  backdrop-filter: blur(10px);
-  margin-top: 20px;
+  padding: 120px 20px;
+  margin: 60px auto; /* Aumentado de 20px para 60px */
   min-height: 400px;
+  background-color: rgba(30, 30, 30, 0.85);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  max-width: 1400px;
 }
 
 /* Galeria de Mídia */
@@ -422,6 +415,19 @@ body {
   .city-content {
     grid-template-columns: 1fr;
   }
+  
+  .section {
+    margin: 40px auto; /* Reduzido em telas menores */
+    padding: 80px 15px;
+  }
+
+  .menu {
+    margin: 40px auto;
+  }
+
+  .hero-section {
+    margin-bottom: 40px;
+  }
 }
 
 /* Modal Styles */
@@ -440,7 +446,8 @@ body {
 }
 
 .modal-content {
-  background: linear-gradient(135deg, #0A1128, #001F54, #034078);
+  background: var(--card-bg);
+  border: 1px solid var(--shadow);
   margin: auto;
   padding: 20px;
   width: 100%;
@@ -504,7 +511,7 @@ body {
 .step-icon {
   width: 70px;
   height: 70px;
-  background: linear-gradient(135deg, #001F54, #034078);
+  background: linear-gradient(135deg, #1a2a6c, #b21f1f);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -552,7 +559,7 @@ body {
 .opportunity-icon {
   width: 70px;
   height: 70px;
-  background: linear-gradient(135deg, #001F54, #034078);
+  background: linear-gradient(135deg, #1a2a6c, #b21f1f);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -628,8 +635,11 @@ body {
         line-height: 1.6;
     }
 
-    .business-vocab-modal .modal-content {
-        background: linear-gradient(135deg, #0A1128, #001F54, #034078);
+    .business-vocab-modal .modal-content h2 {
+        color: white;
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 2rem;
     }
 
     @media (max-width: 768px) {
@@ -930,6 +940,21 @@ body.dark-theme {
     box-shadow: 0 2px 8px rgba(255, 215, 0, 0.2); /* Sutil brilho dourado */
 }
 
+.dark-theme .cta-button {
+    background: linear-gradient(135deg, #2dd4bf, #14b8a6);
+    color: #ffffff;
+    border: none;
+    box-shadow: 0 4px 15px rgba(20, 184, 166, 0.2);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.dark-theme .cta-button:hover {
+    background: linear-gradient(135deg, #14b8a6, #0d9488);
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(20, 184, 166, 0.3);
+}
+
 .close-modal {
     position: absolute;
     top: -20px;
@@ -996,7 +1021,7 @@ body.dark-theme {
 
 /* Testimonials Section */
 .testimonials-section {
-    background-color: rgba(10, 17, 40, 0.7);
+    background-color: rgba(30, 30, 30, 0.7);
 }
 
 .testimonials-grid {
