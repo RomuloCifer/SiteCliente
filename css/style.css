@@ -51,7 +51,7 @@ body {
 /* Hero Section */
 .hero-section {
   background: linear-gradient(rgba(10, 10, 10, 0.9), rgba(10, 10, 10, 0.9)),
-              url('images/hero-bg.png') center/cover;
+              url('../assets/images/nova-friburgo.jpg') center/cover;
   color: white;
   padding: 80px 20px;
   text-align: center;
