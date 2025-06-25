@@ -1,10 +1,10 @@
 :root {
-  --primary-color: #3A3A3C;
-  --secondary-color: #CA8B84;
+  --primary-color: #09181B;
+  --secondary-color: #00FF9F;
   --accent-color: #ACC1C4;
-  --bg-color: #EFE9DC;
-  --text-color: #3A3A3C;
-  --card-bg: #FFFFFF;
+  --bg-color: #EFEFEF;
+  --text-color: #09181B;
+  --card-bg: #EFEFEF;
   --shadow: rgba(0,0,0,0.1);
 }
 
@@ -90,12 +90,12 @@ body {
 /*body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #f5f5f5;
+  background-color: #EFEFEF;
 }*/
 
 /* Cabeçalho */
 .hero {
-  background-color: #11223a;
+  background-color: #09181B;
   padding: 20px;
   position: sticky;
   top: 0;
@@ -130,7 +130,7 @@ body {
 }
 
 .dark-theme .logo-english {
-    color: #fff;
+    color: #FFFFFF;
 }
 
 .dark-theme .logo-hub {
@@ -151,13 +151,13 @@ body {
   text-decoration: none;
   font-weight: bold;
   transition: background-color 0.2s ease, color 0.2s ease;
-  border: 2px solid #fff;
+  border: 2px solid #FFFFFF;
 }
 
 .btn-top:hover {
-  background-color: #11223a;
-  color: #fff;
-  border-color: #fff;
+  background-color: #09181B;
+  color: #FFFFFF;
+  border-color: #FFFFFF;
 }
 
 /* Menu com 3 cards */
@@ -254,7 +254,7 @@ body {
 .formulario textarea {
   padding: 10px;
   font-size: 16px;
-  border: 1px solid #ccc;
+  border: 1px solid #3A3A3C;
   border-radius: 5px;
   resize: vertical;
 }
@@ -262,14 +262,14 @@ body {
 .formulario select {
   padding: 10px;
   font-size: 16px;
-  border: 1px solid #ccc;
+  border: 1px solid #3A3A3C;
   border-radius: 5px;
   width: 100%;
 }
 
 .formulario button {
   padding: 12px;
-  background-color: #11223a;
+  background-color: #09181B;
   color: white;
   border: none;
   border-radius: 5px;
@@ -294,7 +294,7 @@ body {
 }
 
 .side-icon-btn {
-  background-color: #11223a;
+  background-color: #09181B;
   color: white;
   width: 45px;
   height: 45px;
@@ -338,7 +338,7 @@ body {
 
 .benefit-card i {
   font-size: 2.5rem;
-  color: #11223a;
+  color: #09181B;
   margin-bottom: 20px;
 }
 
@@ -351,14 +351,14 @@ body {
 }
 
 .tip-card {
-  background: #fff;
+  background: #FFFFFF;
   padding: 25px;
   border-radius: 15px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
 .read-more {
-  color: #11223a;
+  color: #09181B;
   text-decoration: none;
   font-weight: bold;
   display: inline-block;
@@ -665,7 +665,7 @@ body {
 
     /* Estilos para o temporizador e oferta especial */
 .special-offer {
-    background: linear-gradient(135deg, var(--card-bg), #2d2d2d);
+    background: linear-gradient(135deg, var(--card-bg), #09181B);
     border: 1px solid var(--shadow);
     padding: 30px;
     border-radius: 20px;
@@ -781,7 +781,7 @@ body {
     position: fixed;
     bottom: 30px;
     right: 30px;
-    background-color: #25d366;
+    background-color: #00FF9F;
     color: white;
     border-radius: 50px;
     padding: 15px 25px;
@@ -827,7 +827,7 @@ body {
 .theme-button {
     background: none;
     border: none;
-    color: #fff;
+    color: #FFFFFF;
     font-size: 20px;
     cursor: pointer;
     padding: 10px;
@@ -849,44 +849,44 @@ body {
 
 /* Dark Theme Variables */
 body.dark-theme {
-  --primary-color: #3A3A3C;
-  --secondary-color: #CA8B84;
-  --bg-color: #EFE9DC;
-  --text-color: #3A3A3C;
-  --card-bg: #FFFFFF;
+  --primary-color: #09181B;
+  --secondary-color: #00FF9F;
+  --bg-color: #EFEFEF;
+  --text-color: #09181B;
+  --card-bg: #EFEFEF;
   --shadow: rgba(0,0,0,0.1);
 }
 
 /* Dark Theme Classes */
 body.dark-theme {
-    background-color: #1a1a1a;
-    color: #fff;
+    background-color: #09181B;
+    color: #FFFFFF;
 }
 
 .dark-theme .section {
-    background-color: #2d2d2d;
-    color: #fff;
+    background-color: #09181B;
+    color: #FFFFFF;
 }
 
 .dark-theme .card {
     background-color: #3d3d3d;
-    color: #fff;
+    color: #FFFFFF;
     box-shadow: 0 4px 8px rgba(255,255,255,0.1);
 }
 
 .dark-theme .benefit-card,
 .dark-theme .tip-card {
     background-color: #3d3d3d;
-    color: #fff;
+    color: #FFFFFF;
     box-shadow: 0 4px 15px rgba(0,0,0,0.3);
 }
 
 .dark-theme .formulario input,
 .dark-theme .formulario textarea,
 .dark-theme .formulario select {
-    background-color: #2d2d2d;
-    color: #fff;
-    border-color: #4d4d4d;
+    background-color: #09181B;
+    color: #FFFFFF;
+    border-color: #3A3A3C;
 }
 
 .dark-theme .hero {
@@ -894,7 +894,7 @@ body.dark-theme {
 }
 
 .dark-theme .menu {
-    background-color: #2d2d2d;
+    background-color: #09181B;
 }
 
 .dark-theme .theme-button {
@@ -904,7 +904,7 @@ body.dark-theme {
 }
 
 .dark-theme .theme-button:hover {
-    color: #fff;
+    color: #FFFFFF;
 }
 
 /* Ajustes dos ícones para tema escuro */
@@ -917,7 +917,7 @@ body.dark-theme {
 }
 
 .dark-theme .side-icon-btn {
-    background-color: #2d2d2d;
+    background-color: #09181B;
     color: #00ffff; /* Ciano para os ícones do menu lateral */
 }
 
@@ -928,9 +928,9 @@ body.dark-theme {
 
 /* Ajuste dos botões do topo para tema escuro */
 .dark-theme .btn-top {
-    background-color: #2d2d2d;
+    background-color: #09181B;
     color: #e0e0e0; /* Cinza claro elegante */
-    border-color: #4d4d4d;
+    border-color: #3A3A3C;
 }
 
 .dark-theme .btn-top:hover {
@@ -942,7 +942,7 @@ body.dark-theme {
 
 .dark-theme .cta-button {
     background: linear-gradient(135deg, #2dd4bf, #14b8a6);
-    color: #ffffff;
+    color: #EFEFEF;
     border: none;
     box-shadow: 0 4px 15px rgba(20, 184, 166, 0.2);
     font-weight: 600;
@@ -959,7 +959,7 @@ body.dark-theme {
     position: absolute;
     top: -20px;
     right: -20px;
-    background-color: #fff;
+    background-color: #FFFFFF;
     border: 2px solid #1a2a6c;
     border-radius: 50%;
     width: 40px;
@@ -980,7 +980,7 @@ body.dark-theme {
 
 .close-modal:hover {
     background-color: #1a2a6c;
-    color: #fff;
+    color: #FFFFFF;
     transform: rotate(90deg);
 }
 
@@ -1060,7 +1060,7 @@ body.dark-theme {
 
 .testimonial-content h4 {
     margin: 0;
-    color: #11223a;
+    color: #09181B;
 }
 
 .testimonial-content span {
@@ -1213,7 +1213,7 @@ body.dark-theme {
 .sticky-header {
   position: sticky;
   top: 0;
-  background-color: #11223a;
+  background-color: #09181B;
   z-index: 1000;
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
@@ -1227,7 +1227,7 @@ body.dark-theme {
 
 .cta-top {
   background: linear-gradient(135deg, #00FF9F, #00CC7E);
-  color: #11223a;
+  color: #09181B;
   padding: 10px 25px;
   border-radius: 25px;
   font-weight: bold;
@@ -1246,7 +1246,7 @@ body.dark-theme {
 .sticky-header {
   position: sticky;
   top: 0;
-  background-color: #11223a;
+  background-color: #09181B;
   z-index: 1000;
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
@@ -1262,13 +1262,13 @@ body.dark-theme {
   display: block;
   font-size: 0.85rem;
   font-weight: normal;
-  color: #ccc;
+  color: #3A3A3C;
   margin-top: 3px;
 }
 
 .cta-top {
   background: linear-gradient(135deg, #00FF9F, #00CC7E);
-  color: #11223a;
+  color: #09181B;
   padding: 10px 25px;
   border-radius: 25px;
   font-weight: bold;
@@ -1291,7 +1291,7 @@ body.dark-theme {
 
 .feature-title {
   font-size: 2rem;
-  color: #11223a;
+  color: #09181B;
   margin-bottom: 40px;
 }
 
@@ -1326,7 +1326,7 @@ body.dark-theme {
 
 /* Ajustes para header fixo com fundo escuro e contraste */
 .hero, .sticky-header {
-  background-color: #3A3A3C !important;
+  background-color: #09181B !important;
   color: white;
 }
 
@@ -1338,35 +1338,22 @@ body.dark-theme {
 }
 
 .sticky-header .cta-top {
-  background-color: #CA8B84;
-  color: #3A3A3C;
+  background-color: #00FF9F;
+  color: #09181B;
   font-weight: bold;
   border-radius: 25px;
   padding: 10px 20px;
 }
 
 .sticky-header .cta-top:hover {
-  background-color: #AA7959;
+  background-color: #00FF9F;
   color: white;
 }
 
 /* Fundo com gradiente animado mais perceptível */
-body::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(-45deg, #F5F5F5, #EAEAEA, #D6CEC0, #F5F5F5);
-  background-size: 600% 600%;
-  animation: gradientFlow 20s ease infinite;
-  z-index: -1;
-  pointer-events: none;
-}
 
-@keyframes gradientFlow {
-  0% { background-position: 0% 50%; }
+
+
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
