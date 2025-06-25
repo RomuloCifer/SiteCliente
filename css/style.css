@@ -1,11 +1,11 @@
 :root {
-  --primary-color: #1E1E1E;
-  --secondary-color: #00FF9F;
-  --accent-color: #00CC7E;
-  --bg-color: #0A0A0A;
-  --text-color: #FFFFFF;
-  --card-bg: #1E1E1E;
-  --shadow: rgba(255,255,255,0.1);
+  --primary-color: #3A3A3C;
+  --secondary-color: #CA8B84;
+  --accent-color: #ACC1C4;
+  --bg-color: #EFE9DC;
+  --text-color: #3A3A3C;
+  --card-bg: #ffffff;
+  --shadow: rgba(0,0,0,0.1);
 }
 
 /* Adicionar padrão de estrelas ao fundo */
@@ -849,12 +849,12 @@ body {
 
 /* Dark Theme Variables */
 body.dark-theme {
-  --primary-color: #ffd700;
-  --secondary-color: #00ffff;
-  --bg-color: #1a1a1a;
-  --text-color: #fff;
-  --card-bg: #2d2d2d;
-  --shadow: rgba(255,255,255,0.1);
+  --primary-color: #3A3A3C;
+  --secondary-color: #CA8B84;
+  --bg-color: #EFE9DC;
+  --text-color: #3A3A3C;
+  --card-bg: #ffffff;
+  --shadow: rgba(0,0,0,0.1);
 }
 
 /* Dark Theme Classes */
@@ -1205,4 +1205,121 @@ body.dark-theme {
 
 .trust-indicators .fa-lock {
   color: #ffc107;
+}
+#headerPlaceholder {
+  min-height: 100px; /* ajuste se seu header for maior ou menor */
+}
+
+.sticky-header {
+  position: sticky;
+  top: 0;
+  background-color: #11223a;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.logo-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  letter-spacing: 1px;
+}
+
+.cta-top {
+  background: linear-gradient(135deg, #00FF9F, #00CC7E);
+  color: #11223a;
+  padding: 10px 25px;
+  border-radius: 25px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.cta-top:hover {
+  background: #00CC7E;
+  transform: scale(1.05);
+  color: white;
+}
+
+
+/* Header */
+.sticky-header {
+  position: sticky;
+  top: 0;
+  background-color: #11223a;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.logo-text {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: white;
+  line-height: 1.2;
+}
+
+.logo-sub {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: normal;
+  color: #ccc;
+  margin-top: 3px;
+}
+
+.cta-top {
+  background: linear-gradient(135deg, #00FF9F, #00CC7E);
+  color: #11223a;
+  padding: 10px 25px;
+  border-radius: 25px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.cta-top:hover {
+  background: #00CC7E;
+  transform: scale(1.05);
+  color: white;
+}
+
+/* Cards com fundo claro */
+.feature-strip {
+  background-color: #f2f2f2;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.feature-title {
+  font-size: 2rem;
+  color: #11223a;
+  margin-bottom: 40px;
+}
+
+.feature-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.feature-card {
+  background: #1e1e1e;
+  color: white;
+  padding: 30px;
+  border-radius: 15px;
+  width: 250px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-icon {
+  font-size: 2.5rem;
+  color: #00FF9F;
+  margin-bottom: 20px;
 }

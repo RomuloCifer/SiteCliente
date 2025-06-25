@@ -4,22 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>SmartEnglishHub - Escola de Inglês em Nova Friburgo</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
+<script src="js/theme.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-  <header class="hero" id="mainHeader">
-    <div class="header-content">
-      <img src="imagens/banner.png" alt="SMARTENGLISHUB Logo" class="logo">
-      <div class="top-buttons">
-        <a href="#contato" class="btn-top">Fale Conosco</a>
-        <a href="#" class="btn-top">Voltar ao Topo</a>
-        <button id="themeToggle" class="theme-button">
-          <i class="fas fa-sun"></i>
-        </button>
-      </div>
-    </div>
-  </header>
+  <div id="headerPlaceholder"></div>
 
   <section class="hero-section">
     <div class="hero-content">
@@ -29,20 +19,29 @@
     </div>
   </section>
 
-  <section class="menu" id="mainMenuCards">
-    <a href="#beneficios" class="card">
-      <i class="fas fa-rocket"></i>
-      <span>Benefícios</span>
-    </a>
-    <a href="#dicas" class="card">
-      <i class="fas fa-lightbulb"></i>
-      <span>Dicas de Inglês</span>
-    </a>
-    <a href="#friburgo" class="card">
-      <i class="fas fa-map-marker-alt"></i>
-      <span>Nova Friburgo</span>
-    </a>
-  </section>
+<div id="menuPlaceholder"></div>
+
+<section class="feature-strip">
+  <h2 class="feature-title">Um curso diferente de tudo que você já viu</h2>
+  <div class="feature-grid">
+    <div class="feature-card">
+      <i class="fas fa-laptop feature-icon"></i>
+      <h3>Multiplataforma</h3>
+      <p>Acesse a plataforma em qualquer dispositivo.</p>
+    </div>
+    <div class="feature-card">
+      <i class="fas fa-film feature-icon"></i>
+      <h3>Documentários Originais</h3>
+      <p>Assista a conteúdos exclusivos produzidos no exterior.</p>
+    </div>
+    <div class="feature-card">
+      <i class="fas fa-clock feature-icon"></i>
+      <h3>+ de 500h de Conteúdo</h3>
+      <p>Estude com vídeos e exercícios interativos.</p>
+    </div>
+  </div>
+</section>
+
 
   <section id="beneficios" class="section">
     <h2>Por que estudar conosco?</h2>
@@ -84,7 +83,8 @@
   <section id="friburgo" class="section">
     <h2>Nossa Cidade: Nova Friburgo</h2>
     <div class="city-content">
-      <img src="images/nova-friburgo.jpg" alt="Nova Friburgo" class="city-image">
+      <img src="assets/images/nova-friburgo.jpg" alt="Nova Friburgo" class="city-image">
+
       <div class="city-text">
         <p>Localizada na região serrana do Rio de Janeiro, Nova Friburgo é um polo de oportunidades em crescimento. Com diversas empresas internacionais e um mercado em expansão, o inglês se torna cada vez mais essencial.</p>
       </div>
@@ -564,5 +564,7 @@
     });
   </script>
   <script src="stars.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/theme.js"></script>
 </body>
 </html>

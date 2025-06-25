@@ -1,0 +1,20 @@
+
+<header class="hero sticky-header">
+  <div class="header-content">
+    <div class="logo-text">
+      <strong>Inglês - Nova Friburgo</strong>
+      <small class="logo-sub">Transforme seu futuro através do inglês</small>
+    </div>
+    <div class="top-buttons">
+      <a href="#contato" class="btn-top">Fale Conosco</a>
+      <a href="#" class="btn-top" id="btnTopo">Voltar ao Topo</a>
+      <a href="#contato" class="cta-top">Agendar Aula</a>
+    </div>
+  </div>
+</header>
+<script>
+  document.getElementById('btnTopo')?.addEventListener('click', function(e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
