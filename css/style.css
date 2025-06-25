@@ -387,7 +387,7 @@ body {
 
 .city-text {
   padding: 20px;
-  text-align: left;
+  text-align: centr;
 }
 
 @media (min-width: 768px) {
@@ -578,7 +578,7 @@ body {
 .opportunity ul {
   list-style-type: none;
   padding: 0;
-  text-align: left;
+  text-align: center;
 }
 
 .opportunity ul li {
@@ -1039,7 +1039,7 @@ body.dark-theme {
     border-radius: 15px;
     padding: 30px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    text-align: left;
+    text-align: center;
     display: flex;
     gap: 20px;
     align-items: center;
@@ -1351,9 +1351,3 @@ body.dark-theme {
 }
 
 /* Fundo com gradiente animado mais perceptível */
-
-
-
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
