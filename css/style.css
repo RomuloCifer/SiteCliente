@@ -1351,3 +1351,103 @@ body.dark-theme {
 }
 
 /* Fundo com gradiente animado mais perceptível */
+
+
+
+/* Centralização e visibilidade dos títulos principais */
+h2, .feature-title, .section-title, .testimonials-section h2, .tips-container h2 {
+    text-align: center;
+    color: #EFEFEF;
+    font-size: 1.8rem;
+}
+
+/* Testemunhos - Centralização */
+.testimonial-content {
+    text-align: center;
+}
+
+/* Dicas de inglês - Centralização e ajuste de tipografia */
+.tip-card {
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+/* Títulos internos dos cards de dica */
+.tip-card h3 {
+    font-size: 1.3rem;
+}
+
+/* Centralização da seção de oferta especial */
+.special-offer h2, .special-offer .timer-container, .special-offer .countdown-timer {
+    text-align: center;
+}
+
+
+
+/* Ajuste para o texto de descrição de cidade ou destaque */
+.city-text {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    text-align: center;
+    color: #EFEFEF;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Título destacado "Invista no seu futuro" */
+.highlight-title {
+    font-size: 2rem;
+    color: #00FF9F;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.4);
+}
+
+
+
+/* Forçar visibilidade do título "Invista no seu futuro" */
+h2.highlight-title, .highlight-title {
+    font-size: 2rem;
+    color: #00FF9F !important;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.4);
+}
+
+
+/* Card horizontal destaque */
+
+/* Card horizontal com imagem de fundo */
+.fluency-highlight {
+  margin: 80px auto;
+  max-width: 1200px;
+  padding: 40px 20px;
+  background-image: url('../assets/images/nova-friburgo.jpg'); /* substitua pela imagem desejada */
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  color: #fff;
+  text-align: center;
+}
+
+.fluency-card {
+  background-color: rgba(0,0,0,0.7);
+  padding: 40px;
+  border-radius: 15px;
+}
+
+.fluency-card h2 {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+  color: #00FF9F;
+}
+
+.fluency-card p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+}
