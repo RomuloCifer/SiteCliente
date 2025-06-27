@@ -1,10 +1,10 @@
 :root {
-  --primary-color: #1A1536;
+  --primary-color: #111111;
   --secondary-color: #00F99A;
-  --accent-color: #2B2A3A;
-  --bg-color: #18122B;
+  --accent-color: #181818;
+  --bg-color: #111111;
   --text-color: #F8F8FF;
-  --card-bg: #23203B;
+  --card-bg: #181818;
   --card-bg-light: #F8F8FF;
   --shadow: rgba(0,0,0,0.2);
 }
@@ -51,7 +51,7 @@ body {
 
 /* Hero Section */
 .hero-section {
-  background: linear-gradient(rgba(26, 21, 54, 0.95), rgba(26, 21, 54, 0.95)),
+  background: linear-gradient(rgba(17, 17, 17, 0.95), rgba(17, 17, 17, 0.95)),
               url('../assets/images/nova-friburgo.jpg') center/cover;
   color: var(--text-color);
   padding: 80px 20px;
@@ -163,7 +163,7 @@ body {
 
 /* Menu com 3 cards */
 .menu {
-  background: var(--accent-color);
+  background: var(--accent-color) !important;
   border-radius: 20px;
   box-shadow: 0 4px 24px var(--shadow);
   display: flex;
@@ -175,7 +175,7 @@ body {
 }
 
 .card {
-  background: var(--card-bg);
+  background: var(--card-bg) !important;
   color: var(--secondary-color);
   border-radius: 16px;
   padding: 32px 24px;
@@ -190,25 +190,22 @@ body {
 }
 
 .card i {
-  font-size: 2.5rem;
-  margin-bottom: 12px;
   color: var(--secondary-color);
 }
 
 .card:hover {
-  background: var(--secondary-color);
-  color: var(--primary-color);
-  transform: translateY(-6px) scale(1.04);
+  background: var(--secondary-color) !important;
+  color: var(--primary-color) !important;
 }
 
 .card:hover i {
-  color: var(--primary-color);
+  color: var(--primary-color) !important;
 }
 
 /* Seções */
 .section {
-  background: var(--card-bg);
-  color: var(--text-color);
+  background: var(--card-bg) !important;
+  color: var(--text-color) !important;
   border-radius: 24px;
   margin: 40px auto;
   max-width: 1000px;
@@ -328,6 +325,14 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 30px;
   padding: 20px;
+}
+
+.benefit-card {
+  background: var(--card-bg) !important;
+}
+
+.benefit-card i {
+  color: var(--secondary-color) !important;
 }
 
 .benefit-card {
@@ -454,7 +459,7 @@ body {
 }
 
 .modal-content {
-  background: var(--card-bg);
+  background: var(--card-bg) !important;
   border: 1px solid var(--shadow);
   margin: auto;
   padding: 20px;
@@ -519,13 +524,13 @@ body {
 .step-icon {
   width: 70px;
   height: 70px;
-  background: linear-gradient(135deg, #1a2a6c, #b21f1f);
+  background: var(--secondary-color) !important;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto 20px;
-  color: white;
+  color: var(--primary-color) !important;
   font-size: 25px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.3);
 }
@@ -567,13 +572,13 @@ body {
 .opportunity-icon {
   width: 70px;
   height: 70px;
-  background: linear-gradient(135deg, #1a2a6c, #b21f1f);
+  background: var(--secondary-color) !important;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto 20px;
-  color: white;
+  color: var(--primary-color) !important;
   font-size: 25px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.3);
 }
@@ -857,18 +862,18 @@ body {
 
 /* Dark Theme Variables */
 body.dark-theme {
-  --primary-color: #09181B;
+  --primary-color: #111111;
   --secondary-color: #00FF9F;
-  --bg-color: #EFEFEF;
-  --text-color: #09181B;
-  --card-bg: #EFEFEF;
-  --shadow: rgba(0,0,0,0.1);
+  --bg-color: #111111;
+  --text-color: #F8F8FF;
+  --card-bg: #181818;
+  --shadow: rgba(0,0,0,0.2);
 }
 
 /* Dark Theme Classes */
 body.dark-theme {
-    background-color: #09181B;
-    color: #FFFFFF;
+    background-color: #111111 !important;
+    color: #F8F8FF !important;
 }
 
 .dark-theme .section {
@@ -1234,8 +1239,8 @@ body.dark-theme {
 }
 
 .cta-top {
-  background: linear-gradient(135deg, #00FF9F, #00CC7E);
-  color: #09181B;
+  background: var(--secondary-color) !important;
+  color: var(--primary-color) !important;
   padding: 10px 25px;
   border-radius: 25px;
   font-weight: bold;
@@ -1244,7 +1249,7 @@ body.dark-theme {
 }
 
 .cta-top:hover {
-  background: #00CC7E;
+  background: var(--secondary-color) !important;
   transform: scale(1.05);
   color: white;
 }
@@ -1275,8 +1280,8 @@ body.dark-theme {
 }
 
 .cta-top {
-  background: linear-gradient(135deg, #00FF9F, #00CC7E);
-  color: #09181B;
+  background: var(--secondary-color) !important;
+  color: var(--primary-color) !important;
   padding: 10px 25px;
   border-radius: 25px;
   font-weight: bold;
@@ -1285,14 +1290,14 @@ body.dark-theme {
 }
 
 .cta-top:hover {
-  background: #00CC7E;
+  background: var(--secondary-color) !important;
   transform: scale(1.05);
   color: white;
 }
 
 /* Cards com fundo claro */
 .feature-strip {
-  background: var(--card-bg);
+  background: var(--card-bg) !important;
   color: var(--text-color);
   border-radius: 0 0 32px 32px;
   margin: 0 auto 40px auto;
@@ -1302,14 +1307,14 @@ body.dark-theme {
 }
 
 .feature-title {
-  color: var(--secondary-color);
+  color: var(--secondary-color) !important;
   text-align: center;
   font-size: 2.2rem;
   margin-bottom: 32px;
 }
 
 .video-highlight {
-  background: #18122B;
+  background: #111111 !important;
   padding: 40px 0 32px 0;
   display: flex;
   justify-content: center;
