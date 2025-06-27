@@ -106,11 +106,6 @@
   <section id="dicas" class="section">
     <h2>Dicas de Inglês</h2>
     <div class="tips-container">
-      <article class="tip-card">
-        <h3>Dica do Dia</h3>
-        <p>Como usar "Would" vs "Will" - Aprenda a diferença!</p>
-        <a href="#" class="read-more">Ler mais</a>
-      </article>
       <article class="tip-card" onclick="openBusinessVocabModal()">
         <h3>Vocabulário Empresarial</h3>
         <p>10 expressões essenciais para reuniões</p>
@@ -125,20 +120,7 @@
         <span>10% OFF</span>
       </div>
       <h3>Oferta Especial</h3>
-      <div class="timer-container">
-        <p>Essa oferta expira em:</p>
-        <div class="countdown-timer">
-          <div class="timer-segment">
-            <span id="minutes">15</span>
-            <label>min</label>
-          </div>
-          <div class="timer-divider">:</div>
-          <div class="timer-segment">
-            <span id="seconds">00</span>
-            <label>seg</label>
-          </div>
-        </div>
-      </div>
+      <div class="timer-container"></div>
     </div>
     <p class="contact-intro">Agende sua aula experimental gratuita e comece sua jornada rumo à fluência!</p>
     <form class="formulario">
@@ -151,8 +133,7 @@
         <option value="intermediario">Intermediário</option>
         <option value="avancado">Avançado</option>
       </select>
-      <textarea rows="5" placeholder="Mensagem" required></textarea>
-      <button type="submit">Quero começar agora!</button>
+      <button type="submit" class="btn-verde">Quero começar agora!</button>
     </form>
     <p class="trust-indicators">
       <span><i class="fas fa-check-circle"></i> Aula experimental gratuita</span>

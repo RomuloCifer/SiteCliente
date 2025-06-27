@@ -287,6 +287,21 @@ body {
   background-color: #334466;
 }
 
+/* Botão verde claro para CTA principal */
+.btn-verde, .formulario button.btn-verde {
+  background: #00ffb0 !important;
+  color: #111 !important;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,255,176,0.12);
+  transition: background 0.2s, color 0.2s;
+}
+.btn-verde:hover, .formulario button.btn-verde:hover {
+  background: #00e09a !important;
+  color: #fff !important;
+}
+
 /* Menu Lateral de Ícones */
 .side-icon-menu {
   position: fixed;
@@ -370,6 +385,16 @@ body {
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
+/* Corrige fundo e texto dos cards de dicas */
+.tip-card {
+  background: #181818 !important;
+  color: #F8F8FF !important;
+  border: 1px solid #222 !important;
+}
+.tip-card h3, .tip-card p, .tip-card a {
+  color: #F8F8FF !important;
+}
+
 .read-more {
   color: #09181B;
   text-decoration: none;
@@ -403,10 +428,29 @@ body {
   text-align: centr;
 }
 
-@media (min-width: 768px) {
-  .city-content {
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
+/* Modal de dicas: ajusta tamanho do X e padding para mobile */
+.business-vocab-modal .modal-content.wide-modal {
+  max-width: 98vw !important;
+  padding: 12px 4vw !important;
+}
+.business-vocab-modal .close-modal {
+  top: 8px !important;
+  right: 8px !important;
+  width: 32px !important;
+  height: 32px !important;
+  font-size: 20px !important;
+}
+@media (max-width: 600px) {
+  .business-vocab-modal .modal-content.wide-modal {
+    max-width: 99vw !important;
+    padding: 8px 2vw !important;
+  }
+  .business-vocab-modal .close-modal {
+    top: 4px !important;
+    right: 4px !important;
+    width: 28px !important;
+    height: 28px !important;
+    font-size: 16px !important;
   }
 }
 
@@ -440,6 +484,126 @@ body {
 
   .hero-section {
     margin-bottom: 40px;
+  }
+}
+
+/* Novas regras para responsividade real em celulares */
+@media (max-width: 600px) {
+  .hero-section {
+    padding: 40px 8px;
+    margin-bottom: 24px;
+  }
+  .hero-content h1 {
+    font-size: 1.3rem;
+    min-height: 36px;
+  }
+  .feature-strip {
+    padding: 20px 0 16px 0;
+    border-radius: 0 0 18px 18px;
+    margin-bottom: 20px;
+  }
+  .feature-card, .metodologia-card {
+    flex-direction: column !important;
+    min-height: unset !important;
+    max-width: 100% !important;
+    margin: 20px 0 0 0 !important;
+    border-radius: 14px !important;
+    padding: 18px 8px !important;
+    box-shadow: 0 2px 8px var(--shadow) !important;
+  }
+  .metodologia-card > div {
+    padding: 12px 8px !important;
+    text-align: left !important;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+  }
+  .metodologia-card img {
+    min-width: 0 !important;
+    max-width: 100% !important;
+    height: 180px !important;
+    border-radius: 0 0 14px 14px !important;
+    margin-top: 10px;
+  }
+  .video-container, .video-highlight {
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  .video-container video {
+    max-width: 100% !important;
+    border-radius: 10px !important;
+  }
+  .section {
+    padding: 30px 6px !important;
+    margin: 20px 0 !important;
+    border-radius: 12px !important;
+  }
+  .benefits-grid, .tips-container {
+    gap: 12px !important;
+    padding: 8px !important;
+  }
+  .benefit-card, .tip-card {
+    padding: 16px 8px !important;
+    font-size: 1rem !important;
+    border-radius: 10px !important;
+  }
+  .side-icon-menu {
+    right: 6px !important;
+    top: 70px !important;
+    gap: 6px !important;
+  }
+  .side-icon-btn {
+    width: 36px !important;
+    height: 36px !important;
+    font-size: 15px !important;
+  }
+  .formulario {
+    max-width: 100% !important;
+    padding: 0 2px !important;
+    gap: 8px !important;
+  }
+  .formulario input, .formulario textarea, .formulario select {
+    font-size: 15px !important;
+    padding: 8px !important;
+  }
+  .formulario button {
+    font-size: 15px !important;
+    padding: 10px !important;
+  }
+  .special-offer {
+    padding: 16px 4px !important;
+    border-radius: 12px !important;
+    max-width: 100% !important;
+  }
+  .offer-badge {
+    width: 48px !important;
+    height: 48px !important;
+    font-size: 13px !important;
+    top: -8px !important;
+    right: -8px !important;
+  }
+  .testimonials-section, .testimonials-grid, .testimonial-card {
+    padding: 10px 2px !important;
+    gap: 10px !important;
+    border-radius: 10px !important;
+  }
+  .testimonial-card {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    padding: 10px 4px !important;
+  }
+  .student-photo {
+    width: 48px !important;
+    height: 48px !important;
+  }
+  .popup-cta, .cta-button, .btn-top, .cta-top {
+    font-size: 1rem !important;
+    padding: 10px 12px !important;
+    border-radius: 18px !important;
+  }
+  .feature-title, h2, .section-title, .testimonials-section h2, .tips-container h2 {
+    font-size: 1.2rem !important;
+    margin-bottom: 12px !important;
   }
 }
 
