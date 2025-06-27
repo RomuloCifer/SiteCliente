@@ -1,1 +1,0 @@
-// Sistema de tema removido

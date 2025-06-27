@@ -1,11 +1,12 @@
 :root {
-  --primary-color: #09181B;
-  --secondary-color: #00FF9F;
-  --accent-color: #ACC1C4;
-  --bg-color: #EFEFEF;
-  --text-color: #09181B;
-  --card-bg: #EFEFEF;
-  --shadow: rgba(0,0,0,0.1);
+  --primary-color: #1A1536;
+  --secondary-color: #00F99A;
+  --accent-color: #2B2A3A;
+  --bg-color: #18122B;
+  --text-color: #F8F8FF;
+  --card-bg: #23203B;
+  --card-bg-light: #F8F8FF;
+  --shadow: rgba(0,0,0,0.2);
 }
 
 /* Adicionar padrão de estrelas ao fundo */
@@ -50,12 +51,12 @@ body {
 
 /* Hero Section */
 .hero-section {
-  background: linear-gradient(rgba(10, 10, 10, 0.9), rgba(10, 10, 10, 0.9)),
+  background: linear-gradient(rgba(26, 21, 54, 0.95), rgba(26, 21, 54, 0.95)),
               url('../assets/images/nova-friburgo.jpg') center/cover;
-  color: white;
+  color: var(--text-color);
   padding: 80px 20px;
   text-align: center;
-  margin-bottom: 60px; /* Aumentado para manter consistência */
+  margin-bottom: 60px;
 }
 
 .hero-content {
@@ -162,50 +163,57 @@ body {
 
 /* Menu com 3 cards */
 .menu {
+  background: var(--accent-color);
+  border-radius: 20px;
+  box-shadow: 0 4px 24px var(--shadow);
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 40px 20px;
-  background-color: rgba(30, 30, 30, 0.5);
-  backdrop-filter: blur(10px);
-  flex-wrap: wrap;
-  gap: 20px;
-  margin: 60px auto; /* Aumentado para manter consistência */
-  max-width: 1400px;
-  border-radius: 15px;
+  justify-content: center;
+  gap: 32px;
+  margin: 0 auto 40px auto;
+  max-width: 900px;
+  padding: 32px 0;
 }
 
 .card {
-  background-color: var(--card-bg);
-  border: 1px solid var(--shadow);
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  width: 30%;
-  min-width: 250px;
-  height: 150px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background: var(--card-bg);
+  color: var(--secondary-color);
+  border-radius: 16px;
+  padding: 32px 24px;
+  font-size: 1.2rem;
   font-weight: bold;
+  box-shadow: 0 2px 12px var(--shadow);
+  transition: background 0.3s, color 0.3s, transform 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-decoration: none;
-  color: black;
-  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card i {
+  font-size: 2.5rem;
+  margin-bottom: 12px;
+  color: var(--secondary-color);
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+  background: var(--secondary-color);
+  color: var(--primary-color);
+  transform: translateY(-6px) scale(1.04);
+}
+
+.card:hover i {
+  color: var(--primary-color);
 }
 
 /* Seções */
 .section {
-  padding: 120px 20px;
-  margin: 60px auto; /* Aumentado de 20px para 60px */
-  min-height: 400px;
-  background-color: rgba(30, 30, 30, 0.85);
-  backdrop-filter: blur(10px);
-  border-radius: 20px;
-  max-width: 1400px;
+  background: var(--card-bg);
+  color: var(--text-color);
+  border-radius: 24px;
+  margin: 40px auto;
+  max-width: 1000px;
+  box-shadow: 0 4px 24px var(--shadow);
+  padding: 40px 32px;
 }
 
 /* Galeria de Mídia */
@@ -1284,44 +1292,37 @@ body.dark-theme {
 
 /* Cards com fundo claro */
 .feature-strip {
-  background-color: #f2f2f2;
-  padding: 80px 20px;
-  text-align: center;
+  background: var(--card-bg);
+  color: var(--text-color);
+  border-radius: 0 0 32px 32px;
+  margin: 0 auto 40px auto;
+  max-width: 1000px;
+  box-shadow: 0 8px 32px var(--shadow);
+  padding: 40px 0 32px 0;
 }
 
 .feature-title {
-  font-size: 2rem;
-  color: #09181B;
+  color: var(--secondary-color);
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 32px;
+}
+
+.video-highlight {
+  background: #18122B;
+  padding: 40px 0 32px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 40px;
 }
 
-.feature-grid {
+.video-container {
+  width: 100%;
+  max-width: 700px;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  gap: 30px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.feature-card {
-  background: #1e1e1e;
-  color: white;
-  padding: 30px;
-  border-radius: 15px;
-  width: 250px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
-}
-
-.feature-card:hover {
-  transform: translateY(-5px);
-}
-
-.feature-icon {
-  font-size: 2.5rem;
-  color: #00FF9F;
-  margin-bottom: 20px;
+  align-items: center;
 }
 
 /* Ajustes para header fixo com fundo escuro e contraste */
@@ -1351,7 +1352,6 @@ body.dark-theme {
 }
 
 /* Fundo com gradiente animado mais perceptível */
-
 
 
 /* Centralização e visibilidade dos títulos principais */

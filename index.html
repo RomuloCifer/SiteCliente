@@ -19,6 +19,13 @@
         document.getElementById("headerPlaceholder").innerHTML = data;
       })
       .catch(err => console.error("Erro ao carregar header:", err));
+    // Carregamento dinâmico do menu
+    fetch("components/menu.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("menuPlaceholder").innerHTML = data;
+      })
+      .catch(err => console.error("Erro ao carregar menu:", err));
   });
 </script>
 
@@ -34,49 +41,41 @@
 <div id="menuPlaceholder"></div>
 
 <section class="feature-strip">
-  <h2 class="feature-title">
-<!-- Card horizontal de destaque -->
-
-<section class="fluency-highlight">
-  <div class="fluency-card">
-    <h2>Fale inglês em até 18 meses</h2>
-    <p>Transforme sua vida com um plano rápido, prático e comprovado.</p>
-  </div>
-</section>
-
-<section class="fluency-highlight">
-  <div class="fluency-card">
-    <h2>Método direto e focado no seu objetivo</h2>
-    <p>Nada de aulas infantis. Aqui, você aprende com situações reais, conversando desde o primeiro dia. Material 100% em inglês, com temas que você realmente vai usar.</p>
-  </div>
-</section>
-
-<section class="fluency-highlight">
-  <div class="fluency-card">
-    <h2>Muito além do inglês</h2>
-    <p>Aulas com projetores, foco em oratória, liderança, gestão de tempo e performance. Um curso que desenvolve seu inglês e suas habilidades para a vida.</p>
-  </div>
-</section>
-
-
-
-Um curso diferente de tudo que você já viu</h2>
   <div class="feature-grid">
-    <div class="feature-card">
-      <i class="fas fa-laptop feature-icon"></i>
-      <h3>Multiplataforma</h3>
-      <p>Acesse a plataforma em qualquer dispositivo.</p>
+    <div class="feature-card" style="grid-column: 1 / -1; text-align: center;">
+      <h2 class="feature-title">Duração do curso: 18 meses</h2>
     </div>
-    <div class="feature-card">
-      <i class="fas fa-film feature-icon"></i>
-      <h3>Documentários Originais</h3>
-      <p>Assista a conteúdos exclusivos produzidos no exterior.</p>
-    </div>
-    <div class="feature-card">
-      <i class="fas fa-clock feature-icon"></i>
-      <h3>+ de 500h de Conteúdo</h3>
-      <p>Estude com vídeos e exercícios interativos.</p>
-    </div>
+  </div>
+  <div class="video-container" style="margin: 30px auto; max-width: 700px;">
+    <video controls poster="assets/images/nova-friburgo.jpg" width="100%" style="border-radius: 18px; box-shadow: 0 4px 24px var(--shadow); background: #18122B; display: block;">
+      <source src="assets/videos/duracao.mp4" type="video/mp4">
+      Seu navegador não suporta o elemento de vídeo.
+    </video>
+  </div>
+</section>
+
+<div class="feature-card metodologia-card" style="display: flex; align-items: stretch; min-height: 340px; margin: 40px auto 0 auto; max-width: 1100px; box-shadow: 0 4px 24px var(--shadow); border-radius: 20px; overflow: hidden; background: var(--card-bg);">
+  <div style="flex: 1.2; display: flex; align-items: flex-start; justify-content: flex-start; padding: 40px 32px 40px 40px; background: none;">
+    <h2 style="margin: 0; font-size: 2.2rem; text-align: left; color: var(--secondary-color); line-height: 1.1; font-weight: 800; letter-spacing: -1px;">Metodologia voltada<br>para sua evolução<br>profissional</h2>
+  </div>
+  <div style="flex: 2; display: flex; align-items: center; justify-content: center; padding: 0 32px;">
+    <p style="margin: 0; font-size: 1.15rem; text-align: left; color: var(--text-color);">
+      Aprenda inglês de forma prática, com temas do seu dia a dia e do mercado de trabalho. Aqui, você desenvolve fluência enquanto se prepara para reuniões, entrevistas, apresentações e liderança..<br><br>
+      Vivencie o inglês com uma metodologia que simula situações reais e conecta o idioma aos seus objetivos. Nada de decoreba, é você pensando, falando e crescendo em inglês desde a primeira aula.
+    </p>
+  </div>
+  <div style="flex: 1.1; min-width: 260px; display: flex; align-items: stretch; justify-content: flex-end;">
+    <img src="assets/images/nova-friburgo.jpg" alt="Metodologia" style="width: 100%; height: 100%; object-fit: cover; border-radius: 0 20px 20px 0; box-shadow: none;">
+  </div>
+</div>
+
+<!-- Espaço para vídeo destacado -->
+<section class="video-highlight">
+  <div class="video-container">
+    <video controls poster="assets/images/nova-friburgo.jpg" width="100%" style="max-width: 700px; border-radius: 18px; box-shadow: 0 4px 24px var(--shadow); background: #18122B; display: block; margin: 0 auto;">
+      <source src="assets/videos/destaque.mp4" type="video/mp4">
+      Seu navegador não suporta o elemento de vídeo.
+    </video>
   </div>
 </section>
 
@@ -98,19 +97,6 @@ Um curso diferente de tudo que você já viu</h2>
         <i class="fas fa-laptop"></i>
         <h3>Metodologia Moderna</h3>
         <p>Aprenda com tecnologia e métodos atualizados</p>
-      </div>
-    </div>
-  </section>
-
-  
-
-  <section id="friburgo" class="section">
-    <h2>Nossa Cidade: Nova Friburgo</h2>
-    <div class="city-content">
-      <img src="assets/images/nova-friburgo.jpg" alt="Nova Friburgo" class="city-image">
-
-      <div class="city-text">
-        <p>Localizada na região serrana do Rio de Janeiro, Nova Friburgo é um polo de oportunidades em crescimento. Com diversas empresas internacionais e um mercado em expansão, o inglês se torna cada vez mais essencial.</p>
       </div>
     </div>
   </section>
