@@ -10,22 +10,25 @@
 </head>
 <body>
   
-<div id="headerPlaceholder"></div>
+
+<!-- Header fixo -->
+<header class="hero sticky-header">
+  <div class="header-content">
+    <div class="logo-text">
+      <strong>Inglês - Nova Friburgo</strong>
+      <small class="logo-sub">Transforme seu futuro através do inglês</small>
+    </div>
+    <div class="top-buttons">
+      <a href="#contato" class="btn-top">Fale Conosco</a>
+      <a href="#" class="btn-top" id="btnTopo">Voltar ao Topo</a>
+      <a href="#contato" class="cta-top">Agendar Aula</a>
+    </div>
+  </div>
+</header>
 <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    fetch("components/header.html")
-      .then(res => res.text())
-      .then(data => {
-        document.getElementById("headerPlaceholder").innerHTML = data;
-      })
-      .catch(err => console.error("Erro ao carregar header:", err));
-    // Carregamento dinâmico do menu
-    fetch("components/menu.html")
-      .then(res => res.text())
-      .then(data => {
-        document.getElementById("menuPlaceholder").innerHTML = data;
-      })
-      .catch(err => console.error("Erro ao carregar menu:", err));
+  document.getElementById('btnTopo')?.addEventListener('click', function(e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 </script>
 
@@ -182,7 +185,7 @@
                 <i class="fas fa-comments"></i>
             </div>
             <h3>Prática Real</h3>
-            <p>Conversação com nativos e situações do dia a dia</p>
+            <p>Conversação desde o primeiro dia de aula</p>
         </div>
 
         <div class="step" data-step="5">
@@ -334,7 +337,7 @@
       <h3>Espere! Temos uma oferta especial para você!</h3>
       <p>Matricule-se hoje e ganhe:</p>
       <ul>
-        <li><i class="fas fa-check"></i> 2 aulas extras grátis</li>
+        <li><i class="fas fa-check"></i> Desconto na mensalidade</li>
         <li><i class="fas fa-check"></i> Material didático digital</li>
         <li><i class="fas fa-check"></i> Teste de nivelamento gratuito</li>
       </ul>

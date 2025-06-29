@@ -150,8 +150,8 @@ body {
 
 /* Hero Section */
 .hero-section {
-  background: linear-gradient(rgba(17, 17, 17, 0.95), rgba(17, 17, 17, 0.95)),
-              url('../assets/images/nova-friburgo.jpg') center/cover;
+background: linear-gradient(rgba(17, 17, 17, 0.7), rgba(17, 17, 17, 0.7)),
+            url('../assets/images/nova-friburgo.jpg') center/cover;
   color: var(--text-color);
   padding: 80px 20px;
   text-align: center;
@@ -1538,7 +1538,7 @@ body.dark-theme {
   display: block;
   font-size: 0.85rem;
   font-weight: normal;
-  color: #3A3A3C;
+  color: #ddd6d6 !important;
   margin-top: 3px;
 }
 
@@ -1595,7 +1595,7 @@ body.dark-theme {
 
 /* Ajustes para header fixo com fundo escuro e contraste */
 .hero, .sticky-header {
-  background-color: #09181B !important;
+  background-color: #102a30 !important;
   color: white;
 }
 
