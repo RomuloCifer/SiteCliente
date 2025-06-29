@@ -4,11 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Inglês Inteligente - Nova Friburgo</title>
+
+  <!-- Google Fonts: Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body>
+
+<body style="overflow-x: hidden;">
   
 
 <!-- Header fixo -->
@@ -575,6 +579,45 @@
     });
   </script>
   <script src="js/main.js"></script>
+  <style>
+    body {
+      font-family: 'Inter', Arial, sans-serif !important;
+      overflow-x: hidden !important;
+    }
+    /* Pequenos ajustes extras para garantir responsividade total */
+    html, body {
+      max-width: 100vw;
+    }
+    img, video {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    /* Ajuste para evitar poluição visual de imagens grandes */
+    .feature-card img, .metodologia-card img, .student-photo {
+      max-width: 320px;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 12px;
+      margin: 0 auto;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    @media (max-width: 600px) {
+      .feature-card img, .metodologia-card img, .student-photo {
+        max-width: 90vw;
+        border-radius: 10px;
+      }
+      .feature-strip, .feature-card, .metodologia-card, .section, .testimonials-section {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+      }
+    }
+  </style>
   
 
 <script>
