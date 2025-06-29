@@ -122,7 +122,9 @@
         <span>10% OFF</span>
       </div>
       <h3>Oferta Especial</h3>
-      <div class="timer-container"></div>
+      <div class="timer-container">
+        <span id="minutes">00</span>:<span id="seconds">00</span>
+      </div>
     </div>
     <p class="contact-intro">Agende sua aula experimental gratuita e comece sua jornada rumo à fluência!</p>
     <form class="formulario">
@@ -447,59 +449,81 @@
     }
 
     // Timer functionality
-    function startTimer(duration, display) {
+
+
+    // Função para iniciar o timer da oferta (10 minutos)
+    function startOfferTimer(duration) {
       let timer = duration;
       let minutes, seconds;
-
       const countdown = setInterval(function () {
         minutes = parseInt(timer / 60, 10);
         seconds = parseInt(timer % 60, 10);
-
         minutes = minutes < 10 ? "0" + minutes : minutes;
         seconds = seconds < 10 ? "0" + seconds : seconds;
-
         document.getElementById('minutes').textContent = minutes;
         document.getElementById('seconds').textContent = seconds;
-
         if (--timer < 0) {
           clearInterval(countdown);
+          // Marca como expirada e só libera novamente após 24h
           document.querySelector('.special-offer').classList.add('expired');
           document.querySelector('.special-offer').innerHTML = `
             <div class="offer-expired">
               <i class="fas fa-clock"></i>
               <h3>Oferta Expirada</h3>
-              <p>Entre em contato conosco para conhecer outras ofertas disponíveis!</p>
+              <p>Entre em contato para outras promoções!</p>
             </div>
           `;
+          // Salva o timestamp de quando poderá liberar novamente
+          const nextTime = new Date().getTime() + (24 * 60 * 60 * 1000);
+          localStorage.setItem('nextOfferTime', nextTime);
         }
       }, 1000);
-
       // Store timer end time in localStorage
       const endTime = new Date().getTime() + (duration * 1000);
       localStorage.setItem('timerEndTime', endTime);
     }
 
+    // Função para restaurar a oferta se já passou 24h
+    function resetOfferIfPossible() {
+      const offer = document.querySelector('.special-offer');
+      const offerHtml = `
+        <div class="offer-badge">
+          <i class="fas fa-percentage"></i>
+          <span>10% OFF</span>
+        </div>
+        <h3>Oferta Especial</h3>
+        <div class="timer-container">
+          <span id="minutes">00</span>:<span id="seconds">00</span>
+        </div>
+      `;
+      offer.classList.remove('expired');
+      offer.innerHTML = offerHtml;
+      startOfferTimer(10 * 60); // 10 minutos
+    }
+
     // Check if there's a timer running
     document.addEventListener('DOMContentLoaded', function() {
+      const nextOfferTime = localStorage.getItem('nextOfferTime');
       const endTime = localStorage.getItem('timerEndTime');
-      if (endTime) {
-        const now = new Date().getTime();
+      const now = new Date().getTime();
+      if (nextOfferTime && now < parseInt(nextOfferTime)) {
+        // Oferta expirada, mostra mensagem de expirada
+        document.querySelector('.special-offer').classList.add('expired');
+        document.querySelector('.special-offer').innerHTML = `
+          <div class="offer-expired">
+            <i class="fas fa-clock"></i>
+            <h3>Oferta Expirada</h3>
+            <p>Volte em 24 horas para uma nova oportunidade!</p>
+          </div>
+        `;
+      } else if (endTime && now < parseInt(endTime)) {
+        // Oferta ativa, continua o timer
         const timeLeft = Math.floor((endTime - now) / 1000);
-
-        if (timeLeft > 0) {
-          startTimer(timeLeft);
-        } else {
-          document.querySelector('.special-offer').classList.add('expired');
-          document.querySelector('.special-offer').innerHTML = `
-            <div class="offer-expired">
-              <i class="fas fa-clock"></i>
-              <h3>Oferta Expirada</h3>
-              <p>Entre em contato conosco para conhecer outras ofertas disponíveis!</p>
-            </div>
-          `;
-        }
+        resetOfferIfPossible(); // Garante HTML correto
+        startOfferTimer(timeLeft);
       } else {
-        startTimer(15 * 60); // 15 minutes
+        // Oferta disponível, inicia timer de 10 minutos
+        resetOfferIfPossible();
       }
     });
 
