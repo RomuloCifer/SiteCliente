@@ -1,0 +1,95 @@
+/* Base styles and resets */
+:root {
+    --primary-color: #4CAF50;
+    --secondary-color: #2196F3;
+    --text-color: #333;
+    --bg-color: #FFFFFF;
+    --hover-color: #45a049;
+    --dark-bg: #1a1a1a;
+    --dark-text: #ffffff;
+}
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+}
+
+/* Responsividade base */
+@media (max-width: 1024px) {
+    html {
+        font-size: 95%;
+    }
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 90%;
+    }
+}
+
+@media (max-width: 600px) {
+    html {
+        font-size: 85%;
+    }
+    
+    .container {
+        padding: 0 1rem;
+    }
+}
+
+/* Utilitários */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Animações Globais */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Dark Theme Base */
+body.dark-theme {
+    --text-color: #ffffff;
+    --bg-color: #1a1a1a;
+    --hover-color: #5dbb61;
+}
