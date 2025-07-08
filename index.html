@@ -141,11 +141,11 @@
       </div>
     </div>
     <p class="contact-intro">Entre em contato e saiba como conquistar fluência em inglês com condições especiais!</p>
-    <form class="formulario">
-      <input type="text" placeholder="Nome" required />
-      <input type="email" placeholder="Email" required />
-      <input type="tel" placeholder="Telefone" required />
-      <select required>
+    <form class="formulario" action="https://docs.google.com/forms/d/e/1FAIpQLSdmJ5Xbgkc1cWjTGy7baM2MJR_ktWGbmLmkBAgreE5Cu80AHQ/formResponse" method="POST" target="_blank">
+      <input type="text" name="entry.1655273697" placeholder="Nome" required />
+      <input type="email" name="entry.1168875211" placeholder="Email" required />
+      <input type="tel" name="entry.1686843150" placeholder="Telefone" required />
+      <select name="entry.1966810971" required>
         <option value="">Selecione seu nível de inglês</option>
         <option value="iniciante">Iniciante</option>
         <option value="intermediario">Intermediário</option>
@@ -153,6 +153,7 @@
       </select>
       <button type="submit" class="btn-verde">Quero começar agora!</button>
     </form>
+    <div id="form-success-message" style="display:none; color:#076441; font-size:1.15rem; margin-top:18px; font-weight:600; text-align:center;">Seu contato foi enviado com sucesso! Em breve nossa equipe entrará em contato com você.</div>
     <p class="trust-indicators">
       <span><i class="fas fa-check-circle"></i> Condições especiais para novos alunos</span>
       <span><i class="fas fa-times-circle"></i> Sem cartão de crédito</span>
@@ -590,6 +591,36 @@
     });
   </script>
   <script src="js/main.js"></script>
+
+<script>
+// Envio do formulário para Google Forms sem redirecionar
+document.addEventListener('DOMContentLoaded', function() {
+  const form = document.querySelector('.formulario');
+  const successMsg = document.getElementById('form-success-message');
+  if (form) {
+    form.removeAttribute('target'); // Garante que não abre nova aba
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const formData = new FormData(form);
+      fetch(form.action, {
+        method: 'POST',
+        mode: 'no-cors',
+        body: formData
+      }).then(() => {
+        form.reset();
+        if (successMsg) {
+          successMsg.style.display = 'block';
+        }
+        setTimeout(() => {
+          if (successMsg) successMsg.style.display = 'none';
+        }, 9000);
+      }).catch(() => {
+        alert('Ocorreu um erro ao enviar. Tente novamente mais tarde.');
+      });
+    });
+  }
+});
+</script>
   <style>
     body {
       font-family: 'Inter', Arial, sans-serif !important;
