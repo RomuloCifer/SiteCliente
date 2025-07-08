@@ -50,18 +50,33 @@
 
 <!-- ...existing code... -->
 
-<!-- Duração do curso: 18 meses (sem card, centralizado) -->
-<section class="feature-strip" style="background: none; box-shadow: none; padding-bottom: 0; margin-bottom: 0; border-radius: 24px; overflow: hidden; border: 2.5px solid #076441;">
-  <div style="width: 100%; text-align: center; margin-bottom: 0;">
-    <h2 class="feature-title" style="font-size: 2.5rem; color: var(--secondary-color); margin-bottom: 10px; margin-top: 0.2em; text-align: center; position: relative; top: -18px;">Duração do curso: 18 meses</h2>
-  </div>
-  <div style="display: flex; justify-content: center; align-items: center; width: 100%; margin: 0 auto 24px auto;">
-    <video controls poster="assets/images/nova-friburgo.jpg" style="border-radius: 18px; box-shadow: none; background: #18122B; display: block; max-width: 700px; width: 100%;">
-      <source src="assets/videos/duracao.mp4" type="video/mp4">
-      Seu navegador não suporta o elemento de vídeo.
-    </video>
-  </div>
+<!-- Vídeo principal destacado -->
+<section class="video-section">
+  <video id="mainVideo" controls class="rounded-video" style="border-radius: 18px; box-shadow: none; background: #18122B; display: block; max-width: 700px; width: 100%; margin: 0 auto 24px auto;">
+    <source src="assets/videos/video_inicial.mp4" type="video/mp4">
+    Seu navegador não suporta a tag de vídeo.
+  </video>
 </section>
+
+<script>
+  // Autoplay vídeo quando ele entra na tela (visível)
+  document.addEventListener('DOMContentLoaded', function() {
+    const video = document.getElementById('mainVideo');
+    if (!video) return;
+    let played = false;
+    function handleAutoplay(entries) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !played) {
+          // Tenta dar play (pode ser bloqueado pelo navegador)
+          video.play().catch(() => {});
+          played = true;
+        }
+      });
+    }
+    const observer = new IntersectionObserver(handleAutoplay, { threshold: 0.5 });
+    observer.observe(video);
+  });
+</script>
 
 <div class="feature-card metodologia-card" style="display: flex; align-items: stretch; min-height: 340px; margin: 40px auto 0 auto; max-width: 1100px; box-shadow: 0 4px 24px var(--shadow); border-radius: 20px; overflow: hidden; background: var(--card-bg);">
   <div class="metodologia-title-col" style="flex: 1.2; display: flex; align-items: flex-start; justify-content: flex-start; padding: 40px 32px 40px 40px; background: none;">
@@ -78,15 +93,7 @@
   </div>
 </div>
 
-<!-- Espaço para vídeo destacado -->
-<section class="video-highlight">
-  <div class="video-container">
-    <video controls poster="assets/images/nova-friburgo.jpg" width="100%" style="max-width: 700px; border-radius: 18px; box-shadow: 0 4px 24px var(--shadow); background: #18122B; display: block; margin: 0 auto;">
-      <source src="assets/videos/destaque.mp4" type="video/mp4">
-      Seu navegador não suporta o elemento de vídeo.
-    </video>
-  </div>
-</section>
+<!-- Removido vídeo destacado abaixo da metodologia -->
 
 
   <section id="beneficios" class="section" style="border: 2.5px solid #076441; border-radius: 24px;">
@@ -133,7 +140,7 @@
         <span id="minutes">00</span>:<span id="seconds">00</span>
       </div>
     </div>
-    <p class="contact-intro">Agende sua aula experimental gratuita e comece sua jornada rumo à fluência!</p>
+    <p class="contact-intro">Entre em contato e saiba como conquistar fluência em inglês com condições especiais!</p>
     <form class="formulario">
       <input type="text" placeholder="Nome" required />
       <input type="email" placeholder="Email" required />
@@ -147,7 +154,7 @@
       <button type="submit" class="btn-verde">Quero começar agora!</button>
     </form>
     <p class="trust-indicators">
-      <span><i class="fas fa-check-circle"></i> Aula experimental gratuita</span>
+      <span><i class="fas fa-check-circle"></i> Condições especiais para novos alunos</span>
       <span><i class="fas fa-times-circle"></i> Sem cartão de crédito</span>
       <span><i class="fas fa-lock"></i> Dados protegidos</span>
     </p>
@@ -354,7 +361,8 @@
     </div>
   </div>
 
-  <a href="https://wa.me/5522999999999" class="whatsapp-button" target="_blank" rel="noopener noreferrer">
+
+  <a href="https://wa.me/5522998099102?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20cursos%20de%20ingl%C3%AAs%20e%20as%20condi%C3%A7%C3%B5es%20especiais.%20Pode%20me%20ajudar%3F" class="whatsapp-button" target="_blank" rel="noopener noreferrer">
     <i class="fab fa-whatsapp"></i>
     <span class="whatsapp-text">Agende sua aula agora!</span>
   </a>
@@ -600,13 +608,20 @@
     }
     /* Ajuste para evitar poluição visual de imagens grandes */
     .feature-card img, .metodologia-card img, .student-photo {
-      max-width: 320px;
-      width: 100%;
-      height: auto;
+      max-width: 80px;
+      width: 80px;
+      height: 80px;
       object-fit: cover;
-      border-radius: 12px;
-      margin: 0 auto;
+      border-radius: 50%;
+      margin: 0 auto 12px auto;
       box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      filter: blur(1.5px) brightness(0.95) grayscale(0.2);
+      opacity: 0.85;
+    }
+    .testimonial-name {
+      color: #baffd7;
+      font-weight: 700;
+      letter-spacing: 0.5px;
     }
     @media (max-width: 600px) {
       .feature-card img, .metodologia-card img, .student-photo {
@@ -690,18 +705,18 @@
     <h2>O que nossos alunos dizem</h2>
     <div class="testimonials-grid">
       <div class="testimonial-card">
-        <img src="assets/images/nova-friburgo.jpg" alt="Aluno João" class="student-photo">
+        <img src="assets/images/homem.png" alt="Aluno João" class="student-photo">
         <div class="testimonial-content">
           <p>"Depois de 6 meses de curso, consegui uma promoção para uma posição internacional!"</p>
-          <h4>João Silva</h4>
+          <h4 class="testimonial-name">Jorge Bascello</h4>
           <span>Analista de Marketing</span>
         </div>
       </div>
       <div class="testimonial-card">
-        <img src="assets/images/nova-friburgo.jpg" alt="Aluna Maria" class="student-photo">
+        <img src="assets/images/mulher.png" alt="Aluna Maria" class="student-photo">
         <div class="testimonial-content">
           <p>"A metodologia é incrível. Em 3 meses já estava conversando com clientes em inglês."</p>
-          <h4>Maria Santos</h4>
+          <h4 class="testimonial-name">Beatriz Nendara</h4>
           <span>Desenvolvedora de Software</span>
         </div>
       </div>
